@@ -1,0 +1,28 @@
+/**
+ * Mapping Memory Lab
+ * CS 241 - Fall 2017
+ */
+#include "mmap.h"
+#include "mmu.h"
+#include "page_table.h"
+
+mmap *mmap_create(char *path_to_file) {
+  // TODO implement me!
+  return NULL;
+}
+
+size_t mmap_read(mmap *this, void *buffer, size_t offset,
+                 size_t bytes_to_read) {
+  // TODO implement me!
+  return 0;
+}
+
+size_t mmap_write(mmap *this, void *buffer, size_t offset,
+                  size_t bytes_to_write) {
+  // TODO implement me!
+  return 0;
+}
+
+void munmap(mmap *this) {
+  // TODO implement me!
+}

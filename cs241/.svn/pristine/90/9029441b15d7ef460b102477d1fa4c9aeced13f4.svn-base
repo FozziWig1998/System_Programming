@@ -1,0 +1,21 @@
+/**
+ * Splendid Synchronization Lab
+ * CS 241 - Fall 2017
+ */
+#include <assert.h>
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
+
+#include "queue.h"
+
+
+int main() {
+	
+	
+	
+
+	return 0;
+}

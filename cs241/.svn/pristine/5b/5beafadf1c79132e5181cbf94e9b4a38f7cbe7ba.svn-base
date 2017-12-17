@@ -1,0 +1,212 @@
+[
+  {
+    "timestamp": "2017-11-16 22:00:26.077495",
+    "revision": "51628",
+    "checksum": "234e901c67c6421653ffec80dc35e081c1ae5450  client.c\nf2d1179919e4b81ffa9b17962758e222bcf7b2a4  common.c\n05a33996120a2cd87db7a43785630e3a20b9142c  common.h\n",
+    "testcases": [
+      {
+        "description": "Tests that we cannot delete invalid files",
+        "name": "invalid_delete_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests that we cannot get invalid files",
+        "name": "invalid_get_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests for no memory errors (depends on: PUT)",
+        "name": "memory_test",
+        "ptsEarned": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==32137== Memcheck, a memory error detector\n==32137== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==32137== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==32137== Command: ./client 127.0.0.1:49657 PUT testfile.c testcommon.c\n==32137== \n==32137== \n==32137== HEAP SUMMARY:\n==32137==     in use at exit: 0 bytes in 0 blocks\n==32137==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==32137== \n==32137== All heap blocks were freed -- no leaks are possible\n==32137== \n==32137== For counts of detected and suppressed errors, rerun with: -v\n==32137== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests that we recognize when there is not enough data sent (requires PUT to work)",
+        "name": "too_little_data_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests that we recognize when there is too much data sent (requires PUT to work)",
+        "name": "too_much_data_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work)",
+        "name": "valid_delete_test",
+        "ptsEarned": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work)",
+        "name": "valid_get_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 3.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work)",
+        "name": "valid_list_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests that we can put valid files",
+        "name": "valid_put_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2017-11-17 22:00:26.173912",
+    "revision": "51654",
+    "checksum": "234e901c67c6421653ffec80dc35e081c1ae5450  client.c\nf2d1179919e4b81ffa9b17962758e222bcf7b2a4  common.c\n05a33996120a2cd87db7a43785630e3a20b9142c  common.h\n",
+    "testcases": [
+      {
+        "description": "Tests that we cannot delete invalid files",
+        "name": "invalid_delete_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests that we cannot get invalid files",
+        "name": "invalid_get_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests for no memory errors (depends on: PUT)",
+        "name": "memory_test",
+        "ptsEarned": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==532== Memcheck, a memory error detector\n==532== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==532== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==532== Command: ./client 127.0.0.1:49657 PUT testfile.c testcommon.c\n==532== \n==532== \n==532== HEAP SUMMARY:\n==532==     in use at exit: 0 bytes in 0 blocks\n==532==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==532== \n==532== All heap blocks were freed -- no leaks are possible\n==532== \n==532== For counts of detected and suppressed errors, rerun with: -v\n==532== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests that we recognize when there is not enough data sent (requires PUT to work)",
+        "name": "too_little_data_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests that we recognize when there is too much data sent (requires PUT to work)",
+        "name": "too_much_data_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work)",
+        "name": "valid_delete_test",
+        "ptsEarned": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work)",
+        "name": "valid_get_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 3.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work)",
+        "name": "valid_list_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests that we can put valid files",
+        "name": "valid_put_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2017-11-18 22:00:28.034219",
+    "revision": "51874",
+    "checksum": "234e901c67c6421653ffec80dc35e081c1ae5450  client.c\nf2d1179919e4b81ffa9b17962758e222bcf7b2a4  common.c\n05a33996120a2cd87db7a43785630e3a20b9142c  common.h\n",
+    "testcases": [
+      {
+        "description": "Tests that we cannot delete invalid files",
+        "name": "invalid_delete_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests that we cannot get invalid files",
+        "name": "invalid_get_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests for no memory errors (depends on: PUT)",
+        "name": "memory_test",
+        "ptsEarned": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\n==4234== Memcheck, a memory error detector\n==4234== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==4234== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==4234== Command: ./client 127.0.0.1:49657 PUT testfile.c testcommon.c\n==4234== \n==4234== \n==4234== HEAP SUMMARY:\n==4234==     in use at exit: 0 bytes in 0 blocks\n==4234==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==4234== \n==4234== All heap blocks were freed -- no leaks are possible\n==4234== \n==4234== For counts of detected and suppressed errors, rerun with: -v\n==4234== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests that we recognize when there is not enough data sent (requires PUT to work)",
+        "name": "too_little_data_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests that we recognize when there is too much data sent (requires PUT to work)",
+        "name": "too_much_data_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests that we can delete valid files (requires PUT to work)",
+        "name": "valid_delete_test",
+        "ptsEarned": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0
+      },
+      {
+        "description": "Tests that we can get valid files from the server (requires PUT to work)",
+        "name": "valid_get_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 3.0
+      },
+      {
+        "description": "Tests that we can LIST files (requires PUT to work)",
+        "name": "valid_list_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 2.0
+      },
+      {
+        "description": "Tests that we can put valid files",
+        "name": "valid_put_test",
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nUploaded file content does not match original",
+        "ptsPossible": 2.0
+      }
+    ]
+  }
+]

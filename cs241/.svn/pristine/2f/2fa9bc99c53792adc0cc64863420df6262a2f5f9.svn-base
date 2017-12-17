@@ -1,0 +1,238 @@
+/**
+ * Parallel Make
+ * CS 241 - Fall 2017
+ */
+
+
+#include "format.h"
+#include "graph.h"
+#include "parmake.h"
+#include "parser.h"
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <string.h>
+#include <math.h>
+#include <semaphore.h>
+#include <pthread.h>
+#include "set.h"
+#include "dictionary.h"
+#include "compare.h"
+#include <time.h>
+
+dictionary* par;
+set* visited;
+set* repeats;
+
+int is_file(char* fname) {
+    FILE *file;
+    if ((file = fopen(fname, "r"))) {
+        fclose(file);
+        return 1;
+    }
+    return 0;
+}
+	
+void DFS_detect(graph* g, char* now_v) {
+	set_add(visited, now_v);
+	vector* this_nei = graph_neighbors(g, now_v);
+	size_t nei_size = vector_size(this_nei);
+	for (size_t i = 0; i < nei_size; i++) {
+		char* this_v = vector_get(this_nei, i);
+		if (set_contains(visited, this_v)) {
+			set_add(repeats, now_v);
+			continue;
+		}
+		dictionary_set(par, this_v, now_v);
+		DFS_detect(g, this_v);
+		set_remove(visited, this_v);	
+	}
+	
+	vector_destroy(this_nei);
+} 
+
+void clear_dependency_baba(graph* g, char* it) {
+	if (strcmp(it, "NO_PAR") == 0)  return;
+	
+	
+	if (graph_contains_vertex(g, it)) {
+		//if (strcmp(it, "") != 0) print_cycle_failure((char*)it);
+		//graph_remove_vertex(g, it);
+		rule_t* rule = (rule_t *)graph_get_vertex_value(g, it);
+		rule->state = -66; // -66 means cycle dependency
+	}
+	
+	clear_dependency_baba(g, dictionary_get(par, it));	
+}
+
+int run_sys_cmds(vector* cmds, rule_t* rule) {
+	size_t cmd_size = vector_size(cmds);
+	for (size_t i = 0; i < cmd_size; i++) {
+		char* command = vector_get(cmds, i);
+		int sys_ret = system(command);
+		if (sys_ret != 0) {
+			rule->state = -1;
+			return -1;
+		}	
+	}
+	return 1;
+}
+
+int run_file(graph* g, char* it);
+int run_cmd(graph* g, char* it);
+ 
+int run_file(graph* g, char* it) {
+	rule_t* rule = (rule_t *)graph_get_vertex_value(g, it);
+	int retval = 1;
+	if (rule->state == -66) {
+		return -66;
+	}	
+	int file_run_flag = 1;
+	vector* this_nei = graph_neighbors(g, it);
+	size_t vec_size = vector_size(this_nei);
+	if (vec_size == 0) {
+		// leaf file
+		rule->state = 33;
+		retval = 1;
+	} else {
+		// not a leaf file, run dependencies
+		for (size_t i = 0; i < vec_size; i++) {
+			char* this_v = vector_get(this_nei, i);
+			if (is_file(this_v)) {
+				struct stat file_stat_this_v;
+				struct stat file_stat_it;
+				stat(this_v, &file_stat_this_v);
+				stat(it, &file_stat_it);
+				if (file_stat_this_v.st_mtime < file_stat_it.st_mtime) {
+					file_run_flag = 0;
+					continue;
+				} else {
+					int rf = run_file(g, this_v);
+					if (rf < 0) retval = rf;
+					
+				}
+			} else {
+				rule_t* rule_v = (rule_t *)graph_get_vertex_value(g, this_v);
+				if (rule_v->state > 0) continue;
+				int rc = run_cmd(g, this_v);
+				if (rc < 0) retval = rc;
+				
+			}
+		}
+		if (retval > 0 && file_run_flag) retval = run_sys_cmds(rule->commands, rule);
+	} 
+	vector_destroy(this_nei);
+	return retval;
+}
+
+int run_cmd(graph* g, char* it) {
+	int retval = 1;
+	rule_t* rule = (rule_t *)graph_get_vertex_value(g, it);
+	if (rule->state == -66) {
+		return -66;
+	}
+	//printf("rule state is %d\n", rule->state);
+	
+	int file_run_flag = 1;
+	
+	vector* this_nei = graph_neighbors(g, it);
+	size_t vec_size = vector_size(this_nei);	
+	if (vec_size == 0) {
+		//leaf cmd
+		vector* cmds = rule->commands;
+		retval = run_sys_cmds(cmds, rule);
+		rule->state = retval;
+	} else {
+		// not a leaf cmd, run dependencies
+		for (size_t i = 0; i < vec_size; i++) {
+			char* this_v = vector_get(this_nei, i);
+			if (is_file(this_v)) {
+				struct stat file_stat_this_v;
+				struct stat file_stat_it;
+				stat(this_v, &file_stat_this_v);
+				stat(it, &file_stat_it);
+				if (file_stat_this_v.st_mtime < file_stat_it.st_mtime) {
+					file_run_flag = 0;
+					continue;
+				} else {
+					int rf = run_file(g, this_v);
+					if (rf < 0) retval = rf;
+					
+				}
+			} else {
+				rule_t* rule_v = (rule_t *)graph_get_vertex_value(g, this_v);
+				if (rule_v->state > 0) continue;
+				int rc = run_cmd(g, this_v);
+				if (rc < 0) retval = rc;
+				
+			}
+		}
+		if (retval > 0 && file_run_flag) retval = run_sys_cmds(rule->commands, rule);
+	}
+	
+	vector_destroy(this_nei);
+	return retval;
+}
+
+int parmake(char *makefile, size_t num_threads, char **targets) {
+    par = string_to_string_dictionary_create(); // par to record parent node
+    visited  = string_set_create();
+    repeats  = string_set_create();
+    
+    
+    graph* dependency_graph = parser_parse_makefile(makefile, targets);
+    vector* target_names_begin = graph_vertices(dependency_graph);
+    size_t vec_size = vector_size(target_names_begin);
+    char* first_node = vector_get(target_names_begin, 0);
+
+   
+    	
+	for (size_t i = 0; i < vec_size; i++) {
+		char* str = vector_get(target_names_begin, i);
+		vector* str_pp = graph_antineighbors(dependency_graph, str);
+		if (vector_size(str_pp) == 0 && strcmp(str, first_node) != 0) {
+			graph_remove_vertex(dependency_graph, str);
+		}
+		vector_destroy(str_pp);
+	}
+	dictionary_set(par, first_node, "NO_PAR");
+
+	DFS_detect(dependency_graph, first_node);
+	
+	SET_FOR_EACH(repeats, it, {
+		clear_dependency_baba(dependency_graph, it);
+	});
+    
+
+    if (targets[0] == NULL) {
+    	char* start_str = vector_get(target_names_begin, 1);
+    	int res = 0;
+    	if (is_file(start_str)) {
+			res = run_file(dependency_graph, start_str);
+		} else {
+			res = run_cmd(dependency_graph, start_str);
+		}   
+		if (res == -66) print_cycle_failure(start_str);
+    //	printf("NULL\n");
+    } else {
+		for (char** it = targets; *it != NULL; it++) {
+			int run_res = 0;
+			if (is_file(*it)) {
+				run_res = run_file(dependency_graph, *it);
+			} else {
+				run_res = run_cmd(dependency_graph, *it);
+			}   
+			if (run_res == -66) print_cycle_failure(*it);
+		}
+	}	
+    set_destroy(visited);
+    vector_destroy(target_names_begin);
+	dictionary_destroy(par);
+	set_destroy(repeats);
+	graph_destroy(dependency_graph);
+    
+    return 0;
+}

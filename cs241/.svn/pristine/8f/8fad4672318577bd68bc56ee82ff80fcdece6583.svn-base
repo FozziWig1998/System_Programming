@@ -1,0 +1,62 @@
+/**
+ * Splendid Synchronization Lab
+ * CS 241 - Fall 2017
+ */
+#include <assert.h>
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
+
+#include "queue.c"
+
+queue* this; 
+
+void* start_routine(void* arg) {
+	void* a = queue_pull(arg);
+	fprintf(stderr,"SIG OUT %p\n",a);
+	return NULL;
+}
+
+void signalhandler() {
+	void* a = queue_pull(this);
+	fprintf(stderr,"SIG OUT %p\n",a);
+	//pthread_t tid;
+	//pthread_create(&tid,NULL,&start_routine,(void*)this);
+}
+
+int main() {
+	this = queue_create(10);
+
+	signal(SIGINT,signalhandler);
+
+    
+
+	
+
+	
+	queue_node* head = this->head;
+	queue_node* tail = this->tail;
+	//queue_node* tail = this->tail;
+	
+	for (size_t i = 1; i <= 20; i++) {
+		
+		queue_push(this,(void*)i);
+		printlist(this->head);
+		//printf("now push, %p\n",i);
+	}	
+
+	
+	
+	printlist(this->head);
+	
+	for (size_t i = 1; i <= 30; i++) {
+		void* k = queue_pull(this);
+		printf("now pop, %p\n",k);
+	}
+	
+	
+
+	return 0;
+}

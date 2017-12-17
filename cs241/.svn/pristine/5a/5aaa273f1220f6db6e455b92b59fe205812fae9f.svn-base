@@ -1,0 +1,169 @@
+/**
+ * Machine Problem: Password Cracker
+ * CS 241 - Fall 2017
+ */
+
+#include "cracker2.h"
+#include "format.h"
+#include "utils.h"
+#include "queue.h"
+#include <unistd.h>
+#include <crypt.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <string.h>
+#include <math.h>
+#include <semaphore.h>
+
+
+
+char name[50][100];
+char hash[50][100];
+char half_password[50][100];
+queue* q;
+int finish_i[50];
+int finish;
+int this_finished;
+size_t total_thread_num;
+int now_creaking;
+pthread_mutex_t m = PTHREAD_MUTEX_INITIALIZER;
+sem_t s;
+int cannot_find;
+char password[20];
+
+void* crack(void* thread_id) {
+	int bef_craking = -10;
+	int tid = (long)thread_id;
+	struct crypt_data cdata;
+	cdata.initialized = 0;
+	while (1) {
+		while (bef_craking == now_creaking) {
+			pthread_yield();
+		}
+		bef_craking = now_creaking;
+		
+		int find_res = 2;
+		//fprintf(stderr,"tid is %d, now_creaking is %d\n",tid, now_creaking);
+		if (now_creaking == -100) continue;
+		if (now_creaking == -1) break;
+		long i = now_creaking;
+		
+		char* hash_str = hash[now_creaking];
+		char* pass = half_password[i];
+		char* dot = strstr(pass, ".");
+		int pass_len = strlen(pass);
+		char* fin = &pass[pass_len-1];
+		int num_dots = fin - dot + 1;
+		// copy the pass
+		char testpass[100]; memset(testpass, 0, 100);
+		strcpy(testpass, pass);
+		
+		dot = strstr(testpass, ".");
+		
+		long start_idx = 0; long count = 0;
+		//fprintf(stderr, "num_dots = %d, tid = %d, tot = %zu \n",num_dots, tid, total_thread_num);
+		getSubrange(num_dots, total_thread_num, tid+1, &start_idx, &count);
+		setStringPosition(dot, start_idx);
+		sem_wait(&s);
+		v2_print_thread_start(tid+1, name[i], start_idx, testpass);
+	//	fprintf(stderr,"tid is %d, Name is %s, testpass is %s, count = %ld\n",tid, name[i], testpass, count);
+		long it = 0;
+		for (it = 0; it < count; it++) {
+			if (finish_i[i] == 1) {
+				find_res = 1;
+				break;
+			}				
+			const char *hashed = crypt_r(testpass, "xx", &cdata);
+			if (strcmp(hashed, hash_str) == 0) {
+				pthread_mutex_lock(&m); 
+				finish_i[i] = 1;
+				find_res = 0;
+				this_finished = 1;
+				memset(password, 0, 20);
+				strcpy(password, testpass);
+				//fprintf(stderr,"Name is %s, true pass is %s\n", name[i], testpass);
+				pthread_mutex_unlock(&m);
+				break;
+			}
+			incrementString(testpass);
+			//fprintf(stderr,"cracking Name is %s, pass is %s\n", name[i], testpass);
+		}
+		pthread_mutex_lock(&m); 
+		if (it == count) {
+			cannot_find += 1;
+		}
+		pthread_mutex_unlock(&m);
+		v2_print_thread_result(tid+1, it, find_res);
+		
+	}
+
+	return NULL;
+}
+
+
+
+int start(size_t thread_count) {
+    total_thread_num = thread_count;
+    now_creaking = -100;
+    q = queue_create(200);
+    sem_init(&s, 0, thread_count);
+    ssize_t len = 0;
+    size_t n = 0;
+	long i = 0;
+	char* buffer = NULL;
+	while ((len = getline(&buffer, &n, stdin)) != -1) {
+		if (buffer[len-1] == '\n') {
+			buffer[len-1] = '\0';
+		}
+
+		//strcpy(strings[i],buffer);
+		char* first_space = strstr(buffer, " ");
+		*first_space = '\0';
+		strcpy(name[i], buffer); // copy name;
+		char* second_space = strstr(first_space+1, " ");
+		*second_space = '\0';
+		strcpy(hash[i], first_space+1);
+		strcpy(half_password[i], second_space+1);
+		queue_push(q, (void*)i);
+
+		free(buffer);
+		buffer = NULL;
+		i++;
+	}
+	free(buffer);
+	
+	queue_push(q, (void*)-1);
+	//fprintf(stderr, "jhhhihi\n")
+	pthread_t workers[thread_count];
+	for (unsigned long j = 0; j < thread_count; j++) {
+		pthread_create(&workers[j],NULL, &crack, (void*)j);
+	}
+	
+	for (long j = 0; j < i + 1; j++) {
+		now_creaking = (long)queue_pull(q);
+		while (this_finished == 0 ) {
+			if ((unsigned)cannot_find == thread_count) break;
+			pthread_yield();
+			//fprintf(stderr, "finshi = %d\n", finish_i[now_creaking]);
+		}
+		//v2_print_summary(name[j], )
+		this_finished = 0;
+		
+		for (size_t k = 0; k < thread_count; k++) {
+			sem_post(&s);
+		}
+	} 
+	
+	for (unsigned long j = 0; j < thread_count; j++) {
+		pthread_join(workers[j], NULL);
+	}
+	
+	
+	sem_destroy(&s);
+    pthread_mutex_destroy(&m);
+    queue_destroy(q);
+    return 0; 
+}

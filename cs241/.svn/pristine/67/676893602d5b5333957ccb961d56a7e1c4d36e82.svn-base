@@ -1,0 +1,254 @@
+[
+  {
+    "checksum": "70220d50d0b0af545cd25ded48450a0ca67f484f  parmake.c\n",
+    "timestamp": "2017-10-25 22:00:08.664823",
+    "testcases": [
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that target command gets run",
+        "name": "basic_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nFailed to find correct output (or extra printouts?)",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that targets don't get run until dependencies are satisfied",
+        "name": "basic_test1",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that a more complex dependencies list gets printed correctly",
+        "name": "basic_test2",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that a more complex dependencies list gets printed correctly and not too quickly for 1 thread",
+        "name": "basic_test2_slow",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nToo fast :o",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that cycles are handled appropriately",
+        "name": "cycle_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nFailed to find correct output messages (or cycles printed late?).\nToo few cycles identified!",
+        "ptsPossible": 3.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that all parent dependencies stop when child dependency commands fail",
+        "name": "fail_dependency_command_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nFailed to find correct output",
+        "ptsPossible": 2.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test correct commands are run when command fails",
+        "name": "fail_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nFailed to find correct output",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 1.0,
+        "description": "Memory test",
+        "name": "memory_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that only specified makefile targets get run",
+        "name": "target_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nFailed to find correct output in the correct order (or extra printouts?)",
+        "ptsPossible": 2.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that specified makefile targets with dependencies get run correctly",
+        "name": "target_test1",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that targets don't run if dependency not modified (depends on target_test)",
+        "name": "touch_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 1.0
+      }
+    ],
+    "revision": "40757"
+  },
+  {
+    "checksum": "70220d50d0b0af545cd25ded48450a0ca67f484f  parmake.c\n",
+    "testcases": [
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that target command gets run",
+        "name": "basic_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nFailed to find correct output (or extra printouts?)",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that targets don't get run until dependencies are satisfied",
+        "name": "basic_test1",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that a more complex dependencies list gets printed correctly",
+        "name": "basic_test2",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 3.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that a more complex dependencies list gets printed correctly and not too quickly for 1 thread",
+        "name": "basic_test2_slow",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nToo fast :o",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that cycles are handled appropriately",
+        "name": "cycle_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nFailed to find correct output messages (or cycles printed late?).\nToo few cycles identified!",
+        "ptsPossible": 3.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that all parent dependencies stop when child dependency commands fail",
+        "name": "fail_dependency_command_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nFailed to find correct output",
+        "ptsPossible": 2.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test correct commands are run when command fails",
+        "name": "fail_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nFailed to find correct output",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 1.0,
+        "description": "Memory test",
+        "name": "memory_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that only specified makefile targets get run",
+        "name": "target_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nFailed to find correct output in the correct order (or extra printouts?)",
+        "ptsPossible": 2.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that specified makefile targets with dependencies get run correctly",
+        "name": "target_test1",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "description": "Test that targets don't run if dependency not modified (depends on target_test)",
+        "name": "touch_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nDid not find the correct output",
+        "ptsPossible": 1.0
+      }
+    ],
+    "timestamp": "2017-10-27 22:00:07.968831",
+    "revision": "41374"
+  },
+  {
+    "checksum": "028c59c42b39f6150c29f5528e8e2ea50a80f1f7  parmake.c\n",
+    "testcases": [
+      {
+        "ptsEarned": 1.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "basic_test",
+        "description": "Test that target command gets run",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 1.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "basic_test1",
+        "description": "Test that targets don't get run until dependencies are satisfied",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 3.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "basic_test2",
+        "description": "Test that a more complex dependencies list gets printed correctly",
+        "ptsPossible": 3.0
+      },
+      {
+        "ptsEarned": 1.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "basic_test2_slow",
+        "description": "Test that a more complex dependencies list gets printed correctly and not too quickly for 1 thread",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nFailed to find correct output messages (or cycles printed late?).",
+        "name": "cycle_test",
+        "description": "Test that cycles are handled appropriately",
+        "ptsPossible": 3.0
+      },
+      {
+        "ptsEarned": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "fail_dependency_command_test",
+        "description": "Test that all parent dependencies stop when child dependency commands fail",
+        "ptsPossible": 2.0
+      },
+      {
+        "ptsEarned": 1.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "fail_test",
+        "description": "Test correct commands are run when command fails",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 1.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "memory_test",
+        "description": "Memory test",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 2.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "target_test",
+        "description": "Test that only specified makefile targets get run",
+        "ptsPossible": 2.0
+      },
+      {
+        "ptsEarned": 1.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "name": "target_test1",
+        "description": "Test that specified makefile targets with dependencies get run correctly",
+        "ptsPossible": 1.0
+      },
+      {
+        "ptsEarned": 0.0,
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nFound some possibly correct output but the wrong order (or extra printouts?)\nUnnecessarily executed rule",
+        "name": "touch_test",
+        "description": "Test that targets don't run if dependency not modified (depends on target_test)",
+        "ptsPossible": 1.0
+      }
+    ],
+    "timestamp": "2017-10-28 22:00:07.442197",
+    "revision": "41826"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "timestamp": "2017-11-04 22:00:02.176037",
+    "checksum": "7a83a6700b6edcbab5e8084da63d6526e120dc71  libscheduler.c\ncd679844b810e6f71c7a1bd7af1d7a46a227afc0  libscheduler.h\n",
+    "revision": "45326",
+    "testcases": [
+      {
+        "log": "simulator.c returned with an exit code of 3",
+        "ptsPossible": 3.0,
+        "name": "FCFS",
+        "description": "Compare output of First Come First Served (FCFS) scheduling solutions",
+        "ptsEarned": 0.0
+      },
+      {
+        "log": "simulator.c returned with an exit code of 3",
+        "ptsPossible": 3.0,
+        "name": "PPRI",
+        "description": "Compare output of Preemptive Priority (PPRI) scheduling solutions",
+        "ptsEarned": 0.0
+      },
+      {
+        "log": "simulator.c returned with an exit code of 3",
+        "ptsPossible": 3.0,
+        "name": "PRI",
+        "description": "Compare output of Non-preemptive Priority (PRI) scheduling solutions",
+        "ptsEarned": 0.0
+      },
+      {
+        "log": "simulator.c returned with an exit code of 3",
+        "ptsPossible": 3.0,
+        "name": "PSRTF",
+        "description": "Compare output of Preemptive Shortest Remaining Time First (PSRTF) scheduling solutions",
+        "ptsEarned": 0.0
+      },
+      {
+        "log": "simulator.c returned with an exit code of 3",
+        "ptsPossible": 3.0,
+        "name": "RR1",
+        "description": "Compare output of Round Robin (RR) with a quantum of 1 scheduling solutions",
+        "ptsEarned": 0.0
+      },
+      {
+        "log": "simulator.c returned with an exit code of 3",
+        "ptsPossible": 3.0,
+        "name": "RR2",
+        "description": "Compare output of Round Robin (RR) with a quantum of 2 scheduling solutions",
+        "ptsEarned": 0.0
+      },
+      {
+        "log": "simulator.c returned with an exit code of 3",
+        "ptsPossible": 3.0,
+        "name": "RR4",
+        "description": "Compare output of Round Robin (RR) with a quantum of 4 scheduling solutions",
+        "ptsEarned": 0.0
+      },
+      {
+        "log": "simulator.c returned with an exit code of 3",
+        "ptsPossible": 3.0,
+        "name": "SJF",
+        "description": "Compare output of Non-preemptive Shortest Job First (SJF) scheduling solutions",
+        "ptsEarned": 0.0
+      }
+    ]
+  }
+]

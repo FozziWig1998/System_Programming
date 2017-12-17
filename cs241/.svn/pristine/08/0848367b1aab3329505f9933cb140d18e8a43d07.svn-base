@@ -1,0 +1,3082 @@
+[
+  {
+    "revision": "14679",
+    "checksum": "6ce470da316ed9235c2598dd0a33458fedcea3ea  shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "name": "and_operator_test",
+        "ptsEarned": 1.0,
+        "description": "Checks the && logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cd_test",
+        "ptsEarned": 0.0,
+        "description": "Attempt to cd to a directory",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "check_history",
+        "ptsEarned": 0.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "log": "Error: Failed to find output of correct history"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "eof_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "exit_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell exits correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test",
+        "ptsEarned": 0.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "log": "Program failed to print out commands read from file"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard",
+        "ptsEarned": 0.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "log": "Program failed to print out commands read from file or read all commands from file"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard2",
+        "ptsEarned": 0.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "log": "Error: Your program didn't run the given commands from a file."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_command",
+        "ptsEarned": 0.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "log": "Error: couldn't find error message for running invalid command"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_index_history",
+        "ptsEarned": 0.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "log": "Error: couldn't find error message for running invalid index"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_search_history",
+        "ptsEarned": 0.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "log": "Error: couldn't find error for not finding matching prefix in history"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "memory_check",
+        "ptsEarned": 1.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "or_operator_test",
+        "ptsEarned": 0.0,
+        "description": "Checks the || logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "print_test",
+        "ptsEarned": 0.0,
+        "description": "Testing echo and printing.",
+        "log": "Error: command did not run"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history",
+        "ptsEarned": 0.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "log": "Error: Failed to run command by index"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history_hard",
+        "ptsEarned": 0.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "log": "Error: Failed to run command by index"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history",
+        "ptsEarned": 0.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "log": "Error: failed to run queried command"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history_hard",
+        "ptsEarned": 0.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "log": "Error: failed to run queried command"
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "separator_operator_test",
+        "ptsEarned": 0.0,
+        "description": "Checks the ; operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-09-20 22:00:02.416934"
+  },
+  {
+    "revision": "15761",
+    "checksum": "837774ea7c0b896b0ca66e47eed28cc66589b26e  shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "name": "and_operator_test",
+        "ptsEarned": 1.0,
+        "description": "Checks the && logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cd_test",
+        "ptsEarned": 1.0,
+        "description": "Attempt to cd to a directory",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "check_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "eof_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "exit_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell exits correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test",
+        "ptsEarned": 0.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "log": "Program failed to print out commands read from file"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard",
+        "ptsEarned": 0.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "log": "Program failed to print out commands read from file or read all commands from file"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard2",
+        "ptsEarned": 0.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "log": "Error: Your program didn't run the given commands from a file."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_command",
+        "ptsEarned": 1.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "memory_check",
+        "ptsEarned": 0.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nMEMORY ERROR/LEAK!"
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "or_operator_test",
+        "ptsEarned": 1.0,
+        "description": "Checks the || logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "print_test",
+        "ptsEarned": 1.0,
+        "description": "Testing echo and printing.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "separator_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the ; operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-09-22 22:00:02.688086"
+  },
+  {
+    "revision": "16667",
+    "checksum": "51a23425c80325d6bc2484c48e9a054e906c3056  shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "name": "and_operator_test",
+        "ptsEarned": 1.0,
+        "description": "Checks the && logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cd_test",
+        "ptsEarned": 1.0,
+        "description": "Attempt to cd to a directory",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "check_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "eof_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "exit_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell exits correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test",
+        "ptsEarned": 1.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard",
+        "ptsEarned": 1.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard2",
+        "ptsEarned": 1.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_command",
+        "ptsEarned": 1.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "memory_check",
+        "ptsEarned": 0.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nMEMORY ERROR/LEAK!"
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "or_operator_test",
+        "ptsEarned": 1.0,
+        "description": "Checks the || logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "print_test",
+        "ptsEarned": 1.0,
+        "description": "Testing echo and printing.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "separator_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the ; operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-09-23 22:00:02.185282"
+  },
+  {
+    "revision": "17607",
+    "checksum": "6649076a6912d97d14b34801fe9cb43aee4119b2  shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "name": "and_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the && logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cd_test",
+        "ptsEarned": 1.0,
+        "description": "Attempt to cd to a directory",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "check_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "eof_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "exit_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell exits correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test",
+        "ptsEarned": 1.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard",
+        "ptsEarned": 1.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard2",
+        "ptsEarned": 1.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_command",
+        "ptsEarned": 1.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "memory_check",
+        "ptsEarned": 0.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nMEMORY ERROR/LEAK!"
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "or_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the || logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "print_test",
+        "ptsEarned": 1.0,
+        "description": "Testing echo and printing.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "separator_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the ; operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-09-24 22:00:02.577314"
+  },
+  {
+    "revision": "18477",
+    "checksum": "d89fe7f038e2bd01e490529d37494d00e75b6094  shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "name": "and_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the && logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cd_test",
+        "ptsEarned": 1.0,
+        "description": "Attempt to cd to a directory",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "check_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "eof_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "exit_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell exits correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test",
+        "ptsEarned": 1.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard",
+        "ptsEarned": 1.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard2",
+        "ptsEarned": 1.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_command",
+        "ptsEarned": 1.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "memory_check",
+        "ptsEarned": 0.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nMEMORY ERROR/LEAK!"
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "or_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the || logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "print_test",
+        "ptsEarned": 1.0,
+        "description": "Testing echo and printing.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "separator_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the ; operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-09-25 12:00:02.979125"
+  },
+  {
+    "revision": "19624",
+    "checksum": "d89fe7f038e2bd01e490529d37494d00e75b6094  shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "name": "and_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the && logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cd_test",
+        "ptsEarned": 1.0,
+        "description": "Attempt to cd to a directory",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "check_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "eof_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "exit_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell exits correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test",
+        "ptsEarned": 1.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard",
+        "ptsEarned": 1.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard2",
+        "ptsEarned": 1.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_command",
+        "ptsEarned": 1.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "memory_check",
+        "ptsEarned": 0.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nMEMORY ERROR/LEAK!"
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "or_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the || logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "print_test",
+        "ptsEarned": 1.0,
+        "description": "Testing echo and printing.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "separator_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the ; operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-09-26 00:00:02.263340"
+  },
+  {
+    "revision": "20234",
+    "checksum": "6ce470da316ed9235c2598dd0a33458fedcea3ea  super_shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "name": "and_operator_test",
+        "ptsEarned": 1.0,
+        "description": "Checks the && logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cd_test",
+        "ptsEarned": 0.0,
+        "description": "Attempt to cd to a directory",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "check_background_process",
+        "ptsEarned": 0.0,
+        "description": "Checking if we can run a process in the background (this test will not pass if you do not have the basic non-built in command features implemented)",
+        "log": "Failed test (core functionality)"
+      },
+      {
+        "ptsPossible": 3.0,
+        "name": "check_background_process_group",
+        "ptsEarned": 0.0,
+        "description": "Checking that process groups are used correctly (this test will not pass if you do not have the basic non-built in command features implemented)",
+        "log": "Failed test (core functionality)"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "check_history",
+        "ptsEarned": 0.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "log": "Error: Failed to find output of correct history"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cleanup_zombie",
+        "ptsEarned": 0.0,
+        "description": "Checking if zombie processes are cleaned up",
+        "log": "Error: Process failed to run in background"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "control_c_test",
+        "ptsEarned": 0.0,
+        "description": "Checking if SIGINT is blocked",
+        "log": "Shell quit with sigint"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "eof_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 12.0,
+        "name": "escape_test",
+        "ptsEarned": 0.0,
+        "description": "Tests escaping.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "exit_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell exits correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test",
+        "ptsEarned": 0.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "log": "Program failed to print out commands read from file"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard",
+        "ptsEarned": 0.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "log": "Program failed to print out commands read from file or read all commands from file"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard2",
+        "ptsEarned": 0.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "log": "Error: Your program didn't run the given commands from a file."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "history_file_test",
+        "ptsEarned": 0.0,
+        "description": "Test history file behavior.",
+        "log": "Program failed to print out commands read from file"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_command",
+        "ptsEarned": 0.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "log": "Error: couldn't find error message for running invalid command"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_index_history",
+        "ptsEarned": 0.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "log": "Error: couldn't find error message for running invalid index"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_search_history",
+        "ptsEarned": 0.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "log": "Error: couldn't find error for not finding matching prefix in history"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "memory_check",
+        "ptsEarned": 1.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "memory_check_hard",
+        "ptsEarned": 0.0,
+        "description": "Memory check hard (all features need to work for this).",
+        "log": "Error: Your program didn't run the given commands from a file."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "or_operator_test",
+        "ptsEarned": 0.0,
+        "description": "Checks the || logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "print_test",
+        "ptsEarned": 0.0,
+        "description": "Testing echo and printing.",
+        "log": "Error: command did not run"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "ps_test",
+        "ptsEarned": 0.0,
+        "description": "Test that ps works correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "ps_test_hard",
+        "ptsEarned": 0.0,
+        "description": "Test that ps works correctly (difficult, requires job control)",
+        "log": "Failed test (core functionality)"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history",
+        "ptsEarned": 0.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "log": "Error: Failed to run command by index"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history_hard",
+        "ptsEarned": 0.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "log": "Error: Failed to run command by index"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history",
+        "ptsEarned": 0.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "log": "Error: failed to run queried command"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history_hard",
+        "ptsEarned": 0.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "log": "Error: failed to run queried command"
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "separator_operator_test",
+        "ptsEarned": 0.0,
+        "description": "Checks the ; operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "stop_cont_kill_test",
+        "ptsEarned": 0.0,
+        "description": "Tests STOP, CONT, and KILL",
+        "log": "Failed test (core functionality)"
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "variable_test",
+        "ptsEarned": 0.0,
+        "description": "Tests export and variable expansion. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 16.0,
+        "name": "variable_test_hard",
+        "ptsEarned": 0.0,
+        "description": "Tests export, variable expansion, & escaping. Difficult. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-09-27 09:37:34.916964"
+  },
+  {
+    "revision": "21097",
+    "checksum": "54e44caaff1876825568bba16ee512289e063045  super_shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "name": "and_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the && logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cd_test",
+        "ptsEarned": 1.0,
+        "description": "Attempt to cd to a directory",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "check_background_process",
+        "ptsEarned": 2.0,
+        "description": "Checking if we can run a process in the background (this test will not pass if you do not have the basic non-built in command features implemented)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 3.0,
+        "name": "check_background_process_group",
+        "ptsEarned": 3.0,
+        "description": "Checking that process groups are used correctly (this test will not pass if you do not have the basic non-built in command features implemented)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "check_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cleanup_zombie",
+        "ptsEarned": 1.0,
+        "description": "Checking if zombie processes are cleaned up",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "control_c_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if SIGINT is blocked",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "eof_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 12.0,
+        "name": "escape_test",
+        "ptsEarned": 0.0,
+        "description": "Tests escaping.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "exit_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell exits correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test",
+        "ptsEarned": 1.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard",
+        "ptsEarned": 1.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard2",
+        "ptsEarned": 1.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "history_file_test",
+        "ptsEarned": 0.0,
+        "description": "Test history file behavior.",
+        "log": "Program failed to print out commands read from file"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_command",
+        "ptsEarned": 1.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "memory_check",
+        "ptsEarned": 1.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "memory_check_hard",
+        "ptsEarned": 5.0,
+        "description": "Memory check hard (all features need to work for this).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "or_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the || logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "print_test",
+        "ptsEarned": 1.0,
+        "description": "Testing echo and printing.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "ps_test",
+        "ptsEarned": 0.0,
+        "description": "Test that ps works correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "ps_test_hard",
+        "ptsEarned": 0.0,
+        "description": "Test that ps works correctly (difficult, requires job control)",
+        "log": "Error: Program timeout"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "separator_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the ; operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "stop_cont_kill_test",
+        "ptsEarned": 0.0,
+        "description": "Tests STOP, CONT, and KILL",
+        "log": "Failed to STOP process"
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "variable_test",
+        "ptsEarned": 0.0,
+        "description": "Tests export and variable expansion. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 16.0,
+        "name": "variable_test_hard",
+        "ptsEarned": 0.0,
+        "description": "Tests export, variable expansion, & escaping. Difficult. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-09-27 22:00:09.657208"
+  },
+  {
+    "revision": "21588",
+    "checksum": "00fb62d622d07f9a11272f2dd966ab8892bc8270  super_shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "name": "and_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the && logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cd_test",
+        "ptsEarned": 1.0,
+        "description": "Attempt to cd to a directory",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "check_background_process",
+        "ptsEarned": 2.0,
+        "description": "Checking if we can run a process in the background (this test will not pass if you do not have the basic non-built in command features implemented)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 3.0,
+        "name": "check_background_process_group",
+        "ptsEarned": 3.0,
+        "description": "Checks that process groups are used correctly (requires basic commands and signal handling to work)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "check_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cleanup_zombie",
+        "ptsEarned": 1.0,
+        "description": "Checking if zombie processes are cleaned up",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "control_c_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if SIGINT is blocked",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "eof_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 12.0,
+        "name": "escape_test",
+        "ptsEarned": 8.0,
+        "description": "Tests escaping.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "exit_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell exits correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test",
+        "ptsEarned": 1.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard",
+        "ptsEarned": 1.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard2",
+        "ptsEarned": 1.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "history_file_test",
+        "ptsEarned": 5.0,
+        "description": "Test history file behavior.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_command",
+        "ptsEarned": 1.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "memory_check",
+        "ptsEarned": 1.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "memory_check_hard",
+        "ptsEarned": 5.0,
+        "description": "Memory check hard (all features need to work for this).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "or_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the || logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "print_test",
+        "ptsEarned": 1.0,
+        "description": "Testing echo and printing.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "ps_test",
+        "ptsEarned": 1.0,
+        "description": "Test that ps works correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "ps_test_hard",
+        "ptsEarned": 2.0,
+        "description": "Test that ps works correctly (difficult, requires job control)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history_hard",
+        "ptsEarned": 0.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "log": "Error: Failed to run command by index"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "separator_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the ; operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "stop_cont_kill_test",
+        "ptsEarned": 0.0,
+        "description": "Tests STOP, CONT, and KILL",
+        "log": "Failed to STOP process"
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "variable_test",
+        "ptsEarned": 6.0,
+        "description": "Tests export and variable expansion. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 16.0,
+        "name": "variable_test_hard",
+        "ptsEarned": 12.0,
+        "description": "Tests export, variable expansion, & escaping. Difficult. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-09-28 22:00:09.729980"
+  },
+  {
+    "revision": "21976",
+    "checksum": "52ff960db6b1d1f0c5d3f553ea56a2f1f50a2928  super_shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "name": "and_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the && logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cd_test",
+        "ptsEarned": 1.0,
+        "description": "Attempt to cd to a directory",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "check_background_process",
+        "ptsEarned": 2.0,
+        "description": "Checking if we can run a process in the background (this test will not pass if you do not have the basic non-built in command features implemented)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 3.0,
+        "name": "check_background_process_group",
+        "ptsEarned": 3.0,
+        "description": "Checks that process groups are used correctly (requires basic commands and signal handling to work)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "check_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cleanup_zombie",
+        "ptsEarned": 1.0,
+        "description": "Checking if zombie processes are cleaned up",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "control_c_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if SIGINT is blocked",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "eof_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 12.0,
+        "name": "escape_test",
+        "ptsEarned": 12.0,
+        "description": "Tests escaping.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "exit_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell exits correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test",
+        "ptsEarned": 1.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard",
+        "ptsEarned": 0.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "log": "Program failed to print out commands read from file or read all commands from file"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard2",
+        "ptsEarned": 0.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "log": "Error: Your program didn't run the given commands from a file."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "history_file_test",
+        "ptsEarned": 5.0,
+        "description": "Test history file behavior.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_command",
+        "ptsEarned": 1.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "memory_check",
+        "ptsEarned": 1.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "memory_check_hard",
+        "ptsEarned": 0.0,
+        "description": "Memory check hard (all features need to work for this).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nMEMORY ERROR/LEAK!"
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "or_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the || logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "print_test",
+        "ptsEarned": 1.0,
+        "description": "Testing echo and printing.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "ps_test",
+        "ptsEarned": 1.0,
+        "description": "Test that ps works correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "ps_test_hard",
+        "ptsEarned": 2.0,
+        "description": "Test that ps works correctly (difficult, requires job control)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "separator_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the ; operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "stop_cont_kill_test",
+        "ptsEarned": 0.0,
+        "description": "Tests STOP, CONT, and KILL",
+        "log": "Failed to STOP process"
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "variable_test",
+        "ptsEarned": 6.0,
+        "description": "Tests export and variable expansion. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 16.0,
+        "name": "variable_test_hard",
+        "ptsEarned": 12.0,
+        "description": "Tests export, variable expansion, & escaping. Difficult. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-09-29 22:02:20.529571"
+  },
+  {
+    "revision": "23057",
+    "checksum": "0be0bc7bc3a80fadd2f3618d7d8ef1bd6bc26c9b  super_shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "name": "and_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the && logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cd_test",
+        "ptsEarned": 1.0,
+        "description": "Attempt to cd to a directory",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "check_background_process",
+        "ptsEarned": 2.0,
+        "description": "Checking if we can run a process in the background (this test will not pass if you do not have the basic non-built in command features implemented)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 3.0,
+        "name": "check_background_process_group",
+        "ptsEarned": 3.0,
+        "description": "Checks that process groups are used correctly (requires basic commands and signal handling to work)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "check_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cleanup_zombie",
+        "ptsEarned": 1.0,
+        "description": "Checking if zombie processes are cleaned up",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "control_c_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if SIGINT is blocked",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "eof_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 12.0,
+        "name": "escape_test",
+        "ptsEarned": 12.0,
+        "description": "Tests escaping.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "exit_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell exits correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test",
+        "ptsEarned": 1.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard",
+        "ptsEarned": 1.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard2",
+        "ptsEarned": 1.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "history_file_test",
+        "ptsEarned": 5.0,
+        "description": "Test history file behavior.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_command",
+        "ptsEarned": 1.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "memory_check",
+        "ptsEarned": 1.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "memory_check_hard",
+        "ptsEarned": 5.0,
+        "description": "Memory check hard (all features need to work for this).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "or_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the || logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "print_test",
+        "ptsEarned": 1.0,
+        "description": "Testing echo and printing.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "ps_test",
+        "ptsEarned": 1.0,
+        "description": "Test that ps works correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "ps_test_hard",
+        "ptsEarned": 2.0,
+        "description": "Test that ps works correctly (difficult, requires job control)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "separator_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the ; operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "stop_cont_kill_test",
+        "ptsEarned": 4.0,
+        "description": "Tests STOP, CONT, and KILL",
+        "log": "Failed to KILL process"
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "variable_test",
+        "ptsEarned": 6.0,
+        "description": "Tests export and variable expansion. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 16.0,
+        "name": "variable_test_hard",
+        "ptsEarned": 12.0,
+        "description": "Tests export, variable expansion, & escaping. Difficult. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-09-30 22:00:09.646751"
+  },
+  {
+    "revision": "24091",
+    "checksum": "053bc852a5b3afc379db525cdb3b0e4885c233ce  super_shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "name": "and_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the && logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cd_test",
+        "ptsEarned": 1.0,
+        "description": "Attempt to cd to a directory",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "check_background_process",
+        "ptsEarned": 2.0,
+        "description": "Checking if we can run a process in the background (this test will not pass if you do not have the basic non-built in command features implemented)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 3.0,
+        "name": "check_background_process_group",
+        "ptsEarned": 3.0,
+        "description": "Checks that process groups are used correctly (requires basic commands and signal handling to work)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "check_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cleanup_zombie",
+        "ptsEarned": 0.0,
+        "description": "Checking if zombie processes are cleaned up",
+        "log": "Zombie process remains"
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "control_c_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if SIGINT is blocked",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "eof_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 12.0,
+        "name": "escape_test",
+        "ptsEarned": 12.0,
+        "description": "Tests escaping.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "exit_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell exits correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test",
+        "ptsEarned": 1.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard",
+        "ptsEarned": 1.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard2",
+        "ptsEarned": 1.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "history_file_test",
+        "ptsEarned": 5.0,
+        "description": "Test history file behavior.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_command",
+        "ptsEarned": 1.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "memory_check",
+        "ptsEarned": 1.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "memory_check_hard",
+        "ptsEarned": 5.0,
+        "description": "Memory check hard (all features need to work for this).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "or_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the || logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "print_test",
+        "ptsEarned": 1.0,
+        "description": "Testing echo and printing.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "ps_test",
+        "ptsEarned": 1.0,
+        "description": "Test that ps works correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "ps_test_hard",
+        "ptsEarned": 2.0,
+        "description": "Test that ps works correctly (difficult, requires job control)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "separator_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the ; operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "stop_cont_kill_test",
+        "ptsEarned": 4.0,
+        "description": "Tests STOP, CONT, and KILL",
+        "log": "Failed to KILL process"
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "variable_test",
+        "ptsEarned": 6.0,
+        "description": "Tests export and variable expansion. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 16.0,
+        "name": "variable_test_hard",
+        "ptsEarned": 12.0,
+        "description": "Tests export, variable expansion, & escaping. Difficult. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-10-02 01:37:25.472960"
+  },
+  {
+    "revision": "24688",
+    "checksum": "72c4eadc0347c34df9862baa79ae69cd5f4ebe00  super_shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "name": "and_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the && logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cd_test",
+        "ptsEarned": 1.0,
+        "description": "Attempt to cd to a directory",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "check_background_process",
+        "ptsEarned": 2.0,
+        "description": "Checking if we can run a process in the background (this test will not pass if you do not have the basic non-built in command features implemented)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 3.0,
+        "name": "check_background_process_group",
+        "ptsEarned": 3.0,
+        "description": "Checks that process groups are used correctly (requires basic commands and signal handling to work)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "check_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cleanup_zombie",
+        "ptsEarned": 1.0,
+        "description": "Checking if zombie processes are cleaned up",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "control_c_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if SIGINT is blocked",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "eof_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 12.0,
+        "name": "escape_test",
+        "ptsEarned": 12.0,
+        "description": "Tests escaping.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "exit_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell exits correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test",
+        "ptsEarned": 1.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard",
+        "ptsEarned": 1.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard2",
+        "ptsEarned": 1.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "history_file_test",
+        "ptsEarned": 5.0,
+        "description": "Test history file behavior.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_command",
+        "ptsEarned": 1.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "memory_check",
+        "ptsEarned": 1.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "memory_check_hard",
+        "ptsEarned": 5.0,
+        "description": "Memory check hard (all features need to work for this).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "or_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the || logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "print_test",
+        "ptsEarned": 1.0,
+        "description": "Testing echo and printing.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "ps_test",
+        "ptsEarned": 1.0,
+        "description": "Test that ps works correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "ps_test_hard",
+        "ptsEarned": 2.0,
+        "description": "Test that ps works correctly (difficult, requires job control)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "separator_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the ; operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "stop_cont_kill_test",
+        "ptsEarned": 4.0,
+        "description": "Tests STOP, CONT, and KILL",
+        "log": "Failed to KILL process"
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "variable_test",
+        "ptsEarned": 6.0,
+        "description": "Tests export and variable expansion. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 16.0,
+        "name": "variable_test_hard",
+        "ptsEarned": 12.0,
+        "description": "Tests export, variable expansion, & escaping. Difficult. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-10-02 12:00:09.002827"
+  },
+  {
+    "revision": "25815",
+    "checksum": "92892a5204aa635c4d849026f00ae751ef5062d7  super_shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "name": "and_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the && logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cd_test",
+        "ptsEarned": 1.0,
+        "description": "Attempt to cd to a directory",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "check_background_process",
+        "ptsEarned": 2.0,
+        "description": "Checking if we can run a process in the background (this test will not pass if you do not have the basic non-built in command features implemented)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 3.0,
+        "name": "check_background_process_group",
+        "ptsEarned": 3.0,
+        "description": "Checks that process groups are used correctly (requires basic commands and signal handling to work)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "check_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cleanup_zombie",
+        "ptsEarned": 1.0,
+        "description": "Checking if zombie processes are cleaned up",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "control_c_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if SIGINT is blocked",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "eof_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 12.0,
+        "name": "escape_test",
+        "ptsEarned": 12.0,
+        "description": "Tests escaping.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "exit_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell exits correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test",
+        "ptsEarned": 1.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard",
+        "ptsEarned": 1.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard2",
+        "ptsEarned": 1.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "history_file_test",
+        "ptsEarned": 5.0,
+        "description": "Test history file behavior.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_command",
+        "ptsEarned": 1.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "memory_check",
+        "ptsEarned": 1.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "memory_check_hard",
+        "ptsEarned": 5.0,
+        "description": "Memory check hard (all features need to work for this).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "or_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the || logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "print_test",
+        "ptsEarned": 1.0,
+        "description": "Testing echo and printing.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "ps_test",
+        "ptsEarned": 1.0,
+        "description": "Test that ps works correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "ps_test_hard",
+        "ptsEarned": 2.0,
+        "description": "Test that ps works correctly (difficult, requires job control)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "separator_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the ; operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "stop_cont_kill_test",
+        "ptsEarned": 4.0,
+        "description": "Tests STOP, CONT, and KILL",
+        "log": "Failed to KILL process"
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "variable_test",
+        "ptsEarned": 6.0,
+        "description": "Tests export and variable expansion. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 16.0,
+        "name": "variable_test_hard",
+        "ptsEarned": 12.0,
+        "description": "Tests export, variable expansion, & escaping. Difficult. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-10-02 22:00:51.305229"
+  },
+  {
+    "revision": "26903",
+    "checksum": "92892a5204aa635c4d849026f00ae751ef5062d7  super_shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "name": "and_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the && logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cd_test",
+        "ptsEarned": 1.0,
+        "description": "Attempt to cd to a directory",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "check_background_process",
+        "ptsEarned": 2.0,
+        "description": "Checking if we can run a process in the background (this test will not pass if you do not have the basic non-built in command features implemented)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 3.0,
+        "name": "check_background_process_group",
+        "ptsEarned": 3.0,
+        "description": "Checks that process groups are used correctly (requires basic commands and signal handling to work)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "check_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "cleanup_zombie",
+        "ptsEarned": 1.0,
+        "description": "Checking if zombie processes are cleaned up",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "control_c_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if SIGINT is blocked",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "eof_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 12.0,
+        "name": "escape_test",
+        "ptsEarned": 12.0,
+        "description": "Tests escaping.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "exit_test",
+        "ptsEarned": 1.0,
+        "description": "Checking if shell exits correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test",
+        "ptsEarned": 1.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard",
+        "ptsEarned": 1.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "file_test_hard2",
+        "ptsEarned": 1.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "history_file_test",
+        "ptsEarned": 5.0,
+        "description": "Test history file behavior.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_command",
+        "ptsEarned": 1.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "invalid_query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "memory_check",
+        "ptsEarned": 1.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "name": "memory_check_hard",
+        "ptsEarned": 5.0,
+        "description": "Memory check hard (all features need to work for this).",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "or_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the || logical operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "print_test",
+        "ptsEarned": 1.0,
+        "description": "Testing echo and printing.",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "ps_test",
+        "ptsEarned": 1.0,
+        "description": "Test that ps works correctly",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "ps_test_hard",
+        "ptsEarned": 2.0,
+        "description": "Test that ps works correctly (difficult, requires job control)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_index_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "name": "query_search_history_hard",
+        "ptsEarned": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "name": "separator_operator_test",
+        "ptsEarned": 2.0,
+        "description": "Checks the ; operator is working",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "stop_cont_kill_test",
+        "ptsEarned": 4.0,
+        "description": "Tests STOP, CONT, and KILL",
+        "log": "Failed to KILL process"
+      },
+      {
+        "ptsPossible": 6.0,
+        "name": "variable_test",
+        "ptsEarned": 6.0,
+        "description": "Tests export and variable expansion. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 16.0,
+        "name": "variable_test_hard",
+        "ptsEarned": 12.0,
+        "description": "Tests export, variable expansion, & escaping. Difficult. (Both must work to pass.)",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-10-05 12:41:41.206919"
+  },
+  {
+    "revision": "26903",
+    "checksum": "92892a5204aa635c4d849026f00ae751ef5062d7  super_shell.c\n",
+    "testcases": [
+      {
+        "ptsPossible": 2.0,
+        "description": "Checks the && logical operator is working",
+        "ptsEarned": 2.0,
+        "name": "and_operator_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Attempt to cd to a directory",
+        "ptsEarned": 1.0,
+        "name": "cd_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "description": "Checking if we can run a process in the background (this test will not pass if you do not have the basic non-built in command features implemented)",
+        "ptsEarned": 2.0,
+        "name": "check_background_process",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 3.0,
+        "description": "Checks that process groups are used correctly (requires basic commands and signal handling to work)",
+        "ptsEarned": 3.0,
+        "name": "check_background_process_group",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Checking if history works (you need to have basic non-builtin commands working)",
+        "ptsEarned": 1.0,
+        "name": "check_history",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Checking if zombie processes are cleaned up",
+        "ptsEarned": 1.0,
+        "name": "cleanup_zombie",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Checking if SIGINT is blocked",
+        "ptsEarned": 1.0,
+        "name": "control_c_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Checking if shell handles empty inputs correctly",
+        "ptsEarned": 1.0,
+        "name": "eof_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 12.0,
+        "description": "Tests escaping.",
+        "ptsEarned": 12.0,
+        "name": "escape_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Checking if shell exits correctly",
+        "ptsEarned": 1.0,
+        "name": "exit_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Run 1 command with -f (you should have commands working already).",
+        "ptsEarned": 1.0,
+        "name": "file_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Runs more commands with -f (you should have commands working already).",
+        "ptsEarned": 1.0,
+        "name": "file_test_hard",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Runs hard commands with -f (you should have commands working already) and checks if it exits at EOF.",
+        "ptsEarned": 1.0,
+        "name": "file_test_hard2",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "description": "Test history file behavior.",
+        "ptsEarned": 5.0,
+        "name": "history_file_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Checking that invalid commands are invalidated (you should have commands working already).",
+        "ptsEarned": 1.0,
+        "name": "invalid_command",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Checking if rerunning a nonexistent command by history index fails.",
+        "ptsEarned": 1.0,
+        "name": "invalid_query_index_history",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Checking if rerunning a nonexistent command by invalid query fails",
+        "ptsEarned": 1.0,
+        "name": "invalid_query_search_history",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Memory test - does not depend on shell functionality.",
+        "ptsEarned": 1.0,
+        "name": "memory_check",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 5.0,
+        "description": "Memory check hard (all features need to work for this).",
+        "ptsEarned": 5.0,
+        "name": "memory_check_hard",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "description": "Checks the || logical operator is working",
+        "ptsEarned": 2.0,
+        "name": "or_operator_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Testing echo and printing.",
+        "ptsEarned": 1.0,
+        "name": "print_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Test that ps works correctly",
+        "ptsEarned": 1.0,
+        "name": "ps_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "description": "Test that ps works correctly (difficult, requires job control)",
+        "ptsEarned": 2.0,
+        "name": "ps_test_hard",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Checking if we can rerun a command by index (need to have non-builtin commands working)",
+        "ptsEarned": 1.0,
+        "name": "query_index_history",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Checking if we can rerun a command by index (you need to have all commands working for this)",
+        "ptsEarned": 1.0,
+        "name": "query_index_history_hard",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (need to have non-builtin commands working)",
+        "ptsEarned": 1.0,
+        "name": "query_search_history",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 1.0,
+        "description": "Checking if we can rerun a command by last closest match (hard version and need to have non-builtin commands working)",
+        "ptsEarned": 1.0,
+        "name": "query_search_history_hard",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 2.0,
+        "description": "Checks the ; operator is working",
+        "ptsEarned": 2.0,
+        "name": "separator_operator_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 6.0,
+        "description": "Tests STOP, CONT, and KILL",
+        "ptsEarned": 4.0,
+        "name": "stop_cont_kill_test",
+        "log": "Failed to KILL process"
+      },
+      {
+        "ptsPossible": 6.0,
+        "description": "Tests export and variable expansion. (Both must work to pass.)",
+        "ptsEarned": 6.0,
+        "name": "variable_test",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      },
+      {
+        "ptsPossible": 16.0,
+        "description": "Tests export, variable expansion, & escaping. Difficult. (Both must work to pass.)",
+        "ptsEarned": 12.0,
+        "name": "variable_test_hard",
+        "log": "Trying to compile your code...\nSuccessfully compiled your code."
+      }
+    ],
+    "timestamp": "2017-10-05 19:43:18.904074"
+  }
+]

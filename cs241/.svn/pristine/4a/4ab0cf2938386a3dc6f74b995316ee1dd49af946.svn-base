@@ -1,0 +1,28 @@
+/**
+ * Splendid Synchronization Lab
+ * CS 241 - Fall 2017
+ */
+#include <assert.h>
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+#include "queue.h"
+
+int main() {
+
+    printf("Please write tests cases\n");
+    
+	queue* this = queue_create(10);
+	for (size_t i = 0; i < 20; i++) {
+
+		fprintf(stderr,"Now pushing i = %zu\n",i);	
+		queue_push(this,(void*)i);
+		fprintf(stderr,"Now pushed i = %zu\n",i);
+	}	
+	
+	queue_pull(this);
+
+	return 0;
+}

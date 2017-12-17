@@ -1,0 +1,251 @@
+/**
+ * Scheduler Lab
+ * CS 241 - Fall 2017
+ */
+#include "libpriqueue.h"
+#include "libscheduler.h"
+
+/**
+ * Stores information making up a job to be scheduled including any statistics.
+*/
+typedef struct _job_t {
+    int id;
+    int priority;
+	int arrive_time;
+	int running_time; // to finish
+    int finish_time;
+    int start_time;
+    int has_run_time;// has run how long
+    int fake_running_time;
+    /* Add whatever other bookkeeping you need into this struct. */
+} job_t;
+
+/**
+ * Sores information on how one core is being used.
+ */
+typedef struct _core_t {
+} core_t;
+
+
+int num_jobs;
+static priqueue_t pqueue;
+static core_t core;
+static scheme_t scheme;
+static int (*comparison_func)(const void *, const void *);
+job_t job_array[10000];
+
+int comparer_fcfs(const void *a, const void *b) {
+    job_t* a_job  = (job_t*)a;
+    job_t* b_job  = (job_t*)b;
+    if (a_job->arrive_time < b_job->arrive_time) return -1;
+    if (a_job->arrive_time > b_job->arrive_time) return 1;
+	return a_job->id < b_job->id ? -1 : 1;
+	    
+}
+
+int break_tie(const void *a, const void *b) {
+    return comparer_fcfs(a, b);
+}
+
+int comparer_ppri(const void *a, const void *b) {
+    // Complete as is
+    return comparer_pri(a, b);
+}
+
+int comparer_pri(const void *a, const void *b) {
+    job_t* a_job  = (job_t*)a;
+    job_t* b_job  = (job_t*)b;
+    if (a_job->priority < b_job->priority) return -1;
+    if (a_job->priority > b_job->priority) return 1;
+    return break_tie(a,b);
+}
+
+int comparer_psrtf(const void *a, const void *b) {
+    job_t* a_job  = (job_t*)a;
+    job_t* b_job  = (job_t*)b;
+    if (a_job->running_time - a_job->has_run_time < b_job->running_time - b_job->has_run_time) return -1;
+    if (a_job->running_time - a_job->has_run_time > b_job->running_time - b_job->has_run_time) return 1;
+    return break_tie(a,b);
+}
+
+int comparer_rr(const void *a, const void *b) {
+    return comparer_pri(a, b);
+}
+
+int comparer_sjf(const void *a, const void *b) {
+    job_t* a_job  = (job_t*)a;
+    job_t* b_job  = (job_t*)b;
+    if (a_job->fake_running_time > b_job->fake_running_time) return 1;
+    if (a_job->fake_running_time < b_job->fake_running_time) return -1;
+    return break_tie(a,b);
+	
+}
+
+void scheduler_start_up(scheme_t s) {
+    switch (s) {
+    case FCFS:
+        comparison_func = comparer_fcfs;
+        break;
+    case PRI:
+        comparison_func = comparer_pri;
+        break;
+    case PPRI:
+        comparison_func = comparer_ppri;
+        break;
+    case PSRTF:
+        comparison_func = comparer_psrtf;
+        break;
+    case RR:
+        comparison_func = comparer_rr;
+        break;
+    case SJF:
+        comparison_func = comparer_sjf;
+        break;
+    default:
+        printf("Did not recognize scheme\n");
+        exit(1);
+    }
+    priqueue_init(&pqueue, comparison_func);
+}
+
+int t = 0;
+unsigned last_time = 0;
+job_t* last_job = (void*)-1;
+
+bool scheduler_new_job(int job_number, unsigned time, unsigned running_time,
+                       int priority) {
+    
+    
+    job_t* now_run = (job_t*)priqueue_peek(&pqueue);
+    if (now_run) {
+    	if (now_run == last_job) {
+    		now_run->has_run_time += (time - last_time);
+    	}
+    	//now_run->has_run_time += (time - now_run->arrive_time);
+    	//fprintf(stderr, "id = %d, has_run_time = %d, needtime = %d\n", now_run->id ,now_run->has_run_time, now_run->running_time);
+    	//fprintf(stderr, "new id = %d, needtime = %d\n", job_number , running_time);
+    }
+    
+    
+    job_array[job_number].id = job_number;
+    job_array[job_number].priority = priority;
+    job_array[job_number].arrive_time = time;
+    job_array[job_number].running_time = running_time; 
+    job_array[job_number].has_run_time = 0;
+    job_array[job_number].finish_time = -1;
+    job_array[job_number].start_time = -1;
+    job_array[job_number].fake_running_time = running_time;
+    
+    if (pqueue.comparer == comparer_rr) {
+    	job_array[job_number].priority = 100 + t;
+    }
+    
+	if (pqueue.comparer == comparer_pri) {
+		if (now_run) now_run->priority = -100;
+	}    
+	
+	if (pqueue.comparer == comparer_sjf) {
+		if (now_run) now_run->fake_running_time = -100;
+    }
+	
+    int pq_val = priqueue_offer(&pqueue, &job_array[job_number]);
+    num_jobs++;
+	
+	last_job = (job_t*)priqueue_peek(&pqueue);
+	if (last_job->start_time == -1 ) {
+		//printf("last job id = %d, set time = %u\n", last_job->id, time);
+		last_job->start_time = time;
+		for (int i = 0; i < num_jobs; i++) {
+			if (i != last_job->id && (unsigned)job_array[i].start_time == time) {
+				job_array[i].start_time = -1;
+			}
+		}
+	}	
+	/*if (now_run != last_job) {
+		if (last_job->start_time == -1) {
+			printf("last job id = %d, set time = %u\n", last_job->id, time);
+			last_job->start_time = time;
+		}
+	}*/
+	last_time = time;
+    
+    return (pq_val == 0);
+}
+
+int scheduler_job_finished(int job_number, unsigned time) {
+	job_t* this_job = (job_t*)priqueue_poll(&pqueue);
+	job_array[job_number].finish_time = time;
+			
+	this_job = (job_t*)priqueue_peek(&pqueue);
+	
+	
+	//fprintf(stderr, "This retval is %d\n", this_job->id);
+	if (this_job && this_job->start_time == -1 ) {
+		//printf("this job id = %d, set time = %u\n", last_job->id, time);
+		this_job->start_time = time;
+	}	
+	return this_job == NULL ? -1 : this_job->id;
+    
+    //LYN ha kawaii de shou?;
+}
+
+//unsigned last_time = 0;
+
+int scheduler_quantum_expired(unsigned time) {
+    //unsigned used_time = time - last_time;
+    //last_time = time;
+    job_t* this_job = (job_t*)priqueue_poll(&pqueue);
+    this_job->priority = 100 + (++t);
+    //this_job->has_run_time += used_time;
+    priqueue_offer(&pqueue, this_job);
+    job_t* first_job = priqueue_peek(&pqueue);
+    if (pqueue.comparer == comparer_rr) {
+    	if (first_job->start_time == -1) first_job->start_time = time;
+    }
+    return first_job == NULL ? -1 : first_job->id;
+}
+
+float scheduler_average_waiting_time() {
+    int total_wait_time = 0;
+    for (int i = 0; i < num_jobs; i++) {
+    	total_wait_time += job_array[i].finish_time - job_array[i].arrive_time - job_array[i].running_time;
+    }
+    
+    return 1.0*total_wait_time/num_jobs;
+}
+
+float scheduler_average_turnaround_time() {
+    int total_time = 0;
+    for (int i = 0; i < num_jobs; i++) {
+    	total_time += job_array[i].finish_time - job_array[i].arrive_time;
+    }
+    
+    
+    return 1.0*total_time/num_jobs;
+}
+
+float scheduler_average_response_time() {
+    int total_time = 0;
+    job_array[0].start_time = 0;
+    for (int i = 0; i < num_jobs; i++) {
+    //	printf("this i = %d, start_time is %d\n",i ,job_array[i].start_time );
+    	
+    	total_time += job_array[i].start_time - job_array[i].arrive_time;
+    }
+    
+    return 1.0*total_time/num_jobs;
+}
+
+void scheduler_clean_up() {
+    priqueue_destroy(&pqueue);
+}
+
+void scheduler_show_queue() {
+    // This function is left entirely to you! Totally optional.
+    /*for (entry* it = pqueue.head; it != NULL; it = it->next) {
+    	job_t* dis = (job_t*)(it->value);
+    	fprintf(stderr, "id = %d, priority = %d, running_time = %d, arrive_time = %d, has_run_time = %d, finish_time = %d\n",dis->id,dis->priority,dis->running_time,dis-> arrive_time, dis->has_run_time, dis->finish_time);
+    }
+    fprintf(stderr, "NULL\n");
+*/
+} 

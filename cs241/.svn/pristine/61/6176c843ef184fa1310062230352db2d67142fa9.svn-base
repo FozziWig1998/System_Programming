@@ -1,0 +1,1010 @@
+[
+  {
+    "timestamp": "2017-09-08 22:00:03.465763",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\npart1-functions.c:25:15: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (grade > 70)\n        ~~~~~ ^ ~~\npart1-functions.c:26:32: error: format specifies type 'double' but the argument has type 'const char *' [-Werror,-Wformat]\n        printf(\"%f passed!\\n\", grade);\n                ~~             ^~~~~\n                %s\npart1-functions.c:37:10: error: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int'; take the address with & [-Werror,-Wint-conversion]\n    int *p = x;\n         ^   ~\n             &\npart1-functions.c:73:12: error: incompatible integer to pointer conversion initializing 'float *' with an expression of type 'const int' [-Werror,-Wint-conversion]\n    float *p = *x;\n           ^   ~~\npart1-functions.c:86:11: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n        ~ ^  ~~~\npart1-functions.c:86:23: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n                    ~ ^  ~~~\npart1-functions.c:111:9: error: variable 'values' is uninitialized when used here [-Werror,-Wuninitialized]\n        values[i] = (float)i / n;\n        ^~~~~~\npart1-functions.c:107:18: note: initialize the variable 'values' to silence this warning\n    float *values;\n                 ^\n                  = NULL\npart1-functions.c:146:5: error: statement requires expression of integer type ('const char *' invalid)\n    switch (s) {\n    ^       ~\npart1-functions.c:147:10: error: expression is not an integer constant expression\n    case \"blue\":\n         ^~~~~~\npart1-functions.c:151:10: error: expression is not an integer constant expression\n    case \"orange\":\n         ^~~~~~~~\npart1-functions.c:167:70: error: format specifies type 'double' but the argument has type 'int' [-Werror,-Wformat]\nvoid ten(const int d) { printf(\"The radius of the circle is: %f.\\n\", d / 2); }\n                                                             ~~      ^~~~~\n                                                             %d\npart1-functions.c:192:30: warning: unused parameter 'value' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                             ^\npart1-functions.c:192:46: warning: unused parameter 'flag' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                                             ^\npart1-functions.c:222:28: warning: unused parameter 'transition' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                           ^\npart1-functions.c:222:64: warning: unused parameter 'input_string' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                                                               ^\n4 warnings and 11 errors generated.\nmake: *** [.objs/part1-functions-release.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Part1: Checking for memory issues...",
+        "name": "part1_memory",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\npart1-functions.c:25:15: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (grade > 70)\n        ~~~~~ ^ ~~\npart1-functions.c:26:32: error: format specifies type 'double' but the argument has type 'const char *' [-Werror,-Wformat]\n        printf(\"%f passed!\\n\", grade);\n                ~~             ^~~~~\n                %s\npart1-functions.c:37:10: error: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int'; take the address with & [-Werror,-Wint-conversion]\n    int *p = x;\n         ^   ~\n             &\npart1-functions.c:73:12: error: incompatible integer to pointer conversion initializing 'float *' with an expression of type 'const int' [-Werror,-Wint-conversion]\n    float *p = *x;\n           ^   ~~\npart1-functions.c:86:11: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n        ~ ^  ~~~\npart1-functions.c:86:23: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n                    ~ ^  ~~~\npart1-functions.c:111:9: error: variable 'values' is uninitialized when used here [-Werror,-Wuninitialized]\n        values[i] = (float)i / n;\n        ^~~~~~\npart1-functions.c:107:18: note: initialize the variable 'values' to silence this warning\n    float *values;\n                 ^\n                  = NULL\npart1-functions.c:146:5: error: statement requires expression of integer type ('const char *' invalid)\n    switch (s) {\n    ^       ~\npart1-functions.c:147:10: error: expression is not an integer constant expression\n    case \"blue\":\n         ^~~~~~\npart1-functions.c:151:10: error: expression is not an integer constant expression\n    case \"orange\":\n         ^~~~~~~~\npart1-functions.c:167:70: error: format specifies type 'double' but the argument has type 'int' [-Werror,-Wformat]\nvoid ten(const int d) { printf(\"The radius of the circle is: %f.\\n\", d / 2); }\n                                                             ~~      ^~~~~\n                                                             %d\npart1-functions.c:192:30: warning: unused parameter 'value' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                             ^\npart1-functions.c:192:46: warning: unused parameter 'flag' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                                             ^\npart1-functions.c:222:28: warning: unused parameter 'transition' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                           ^\npart1-functions.c:222:64: warning: unused parameter 'input_string' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                                                               ^\n4 warnings and 11 errors generated.\nmake: *** [.objs/part1-functions-release.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Part1: Test function 1",
+        "name": "part1_test1",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\npart1-functions.c:25:15: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (grade > 70)\n        ~~~~~ ^ ~~\npart1-functions.c:26:32: error: format specifies type 'double' but the argument has type 'const char *' [-Werror,-Wformat]\n        printf(\"%f passed!\\n\", grade);\n                ~~             ^~~~~\n                %s\npart1-functions.c:37:10: error: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int'; take the address with & [-Werror,-Wint-conversion]\n    int *p = x;\n         ^   ~\n             &\npart1-functions.c:73:12: error: incompatible integer to pointer conversion initializing 'float *' with an expression of type 'const int' [-Werror,-Wint-conversion]\n    float *p = *x;\n           ^   ~~\npart1-functions.c:86:11: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n        ~ ^  ~~~\npart1-functions.c:86:23: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n                    ~ ^  ~~~\npart1-functions.c:111:9: error: variable 'values' is uninitialized when used here [-Werror,-Wuninitialized]\n        values[i] = (float)i / n;\n        ^~~~~~\npart1-functions.c:107:18: note: initialize the variable 'values' to silence this warning\n    float *values;\n                 ^\n                  = NULL\npart1-functions.c:146:5: error: statement requires expression of integer type ('const char *' invalid)\n    switch (s) {\n    ^       ~\npart1-functions.c:147:10: error: expression is not an integer constant expression\n    case \"blue\":\n         ^~~~~~\npart1-functions.c:151:10: error: expression is not an integer constant expression\n    case \"orange\":\n         ^~~~~~~~\npart1-functions.c:167:70: error: format specifies type 'double' but the argument has type 'int' [-Werror,-Wformat]\nvoid ten(const int d) { printf(\"The radius of the circle is: %f.\\n\", d / 2); }\n                                                             ~~      ^~~~~\n                                                             %d\npart1-functions.c:192:30: warning: unused parameter 'value' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                             ^\npart1-functions.c:192:46: warning: unused parameter 'flag' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                                             ^\npart1-functions.c:222:28: warning: unused parameter 'transition' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                           ^\npart1-functions.c:222:64: warning: unused parameter 'input_string' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                                                               ^\n4 warnings and 11 errors generated.\nmake: *** [.objs/part1-functions-release.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Part1: Test function 2",
+        "name": "part1_test2",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\npart1-functions.c:25:15: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (grade > 70)\n        ~~~~~ ^ ~~\npart1-functions.c:26:32: error: format specifies type 'double' but the argument has type 'const char *' [-Werror,-Wformat]\n        printf(\"%f passed!\\n\", grade);\n                ~~             ^~~~~\n                %s\npart1-functions.c:37:10: error: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int'; take the address with & [-Werror,-Wint-conversion]\n    int *p = x;\n         ^   ~\n             &\npart1-functions.c:73:12: error: incompatible integer to pointer conversion initializing 'float *' with an expression of type 'const int' [-Werror,-Wint-conversion]\n    float *p = *x;\n           ^   ~~\npart1-functions.c:86:11: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n        ~ ^  ~~~\npart1-functions.c:86:23: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n                    ~ ^  ~~~\npart1-functions.c:111:9: error: variable 'values' is uninitialized when used here [-Werror,-Wuninitialized]\n        values[i] = (float)i / n;\n        ^~~~~~\npart1-functions.c:107:18: note: initialize the variable 'values' to silence this warning\n    float *values;\n                 ^\n                  = NULL\npart1-functions.c:146:5: error: statement requires expression of integer type ('const char *' invalid)\n    switch (s) {\n    ^       ~\npart1-functions.c:147:10: error: expression is not an integer constant expression\n    case \"blue\":\n         ^~~~~~\npart1-functions.c:151:10: error: expression is not an integer constant expression\n    case \"orange\":\n         ^~~~~~~~\npart1-functions.c:167:70: error: format specifies type 'double' but the argument has type 'int' [-Werror,-Wformat]\nvoid ten(const int d) { printf(\"The radius of the circle is: %f.\\n\", d / 2); }\n                                                             ~~      ^~~~~\n                                                             %d\npart1-functions.c:192:30: warning: unused parameter 'value' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                             ^\npart1-functions.c:192:46: warning: unused parameter 'flag' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                                             ^\npart1-functions.c:222:28: warning: unused parameter 'transition' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                           ^\npart1-functions.c:222:64: warning: unused parameter 'input_string' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                                                               ^\n4 warnings and 11 errors generated.\nmake: *** [.objs/part1-functions-release.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Part1: Test function 3",
+        "name": "part1_test3",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\npart1-functions.c:25:15: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (grade > 70)\n        ~~~~~ ^ ~~\npart1-functions.c:26:32: error: format specifies type 'double' but the argument has type 'const char *' [-Werror,-Wformat]\n        printf(\"%f passed!\\n\", grade);\n                ~~             ^~~~~\n                %s\npart1-functions.c:37:10: error: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int'; take the address with & [-Werror,-Wint-conversion]\n    int *p = x;\n         ^   ~\n             &\npart1-functions.c:73:12: error: incompatible integer to pointer conversion initializing 'float *' with an expression of type 'const int' [-Werror,-Wint-conversion]\n    float *p = *x;\n           ^   ~~\npart1-functions.c:86:11: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n        ~ ^  ~~~\npart1-functions.c:86:23: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n                    ~ ^  ~~~\npart1-functions.c:111:9: error: variable 'values' is uninitialized when used here [-Werror,-Wuninitialized]\n        values[i] = (float)i / n;\n        ^~~~~~\npart1-functions.c:107:18: note: initialize the variable 'values' to silence this warning\n    float *values;\n                 ^\n                  = NULL\npart1-functions.c:146:5: error: statement requires expression of integer type ('const char *' invalid)\n    switch (s) {\n    ^       ~\npart1-functions.c:147:10: error: expression is not an integer constant expression\n    case \"blue\":\n         ^~~~~~\npart1-functions.c:151:10: error: expression is not an integer constant expression\n    case \"orange\":\n         ^~~~~~~~\npart1-functions.c:167:70: error: format specifies type 'double' but the argument has type 'int' [-Werror,-Wformat]\nvoid ten(const int d) { printf(\"The radius of the circle is: %f.\\n\", d / 2); }\n                                                             ~~      ^~~~~\n                                                             %d\npart1-functions.c:192:30: warning: unused parameter 'value' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                             ^\npart1-functions.c:192:46: warning: unused parameter 'flag' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                                             ^\npart1-functions.c:222:28: warning: unused parameter 'transition' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                           ^\npart1-functions.c:222:64: warning: unused parameter 'input_string' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                                                               ^\n4 warnings and 11 errors generated.\nmake: *** [.objs/part1-functions-release.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Part1: Test function 4",
+        "name": "part1_test4",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\npart1-functions.c:25:15: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (grade > 70)\n        ~~~~~ ^ ~~\npart1-functions.c:26:32: error: format specifies type 'double' but the argument has type 'const char *' [-Werror,-Wformat]\n        printf(\"%f passed!\\n\", grade);\n                ~~             ^~~~~\n                %s\npart1-functions.c:37:10: error: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int'; take the address with & [-Werror,-Wint-conversion]\n    int *p = x;\n         ^   ~\n             &\npart1-functions.c:73:12: error: incompatible integer to pointer conversion initializing 'float *' with an expression of type 'const int' [-Werror,-Wint-conversion]\n    float *p = *x;\n           ^   ~~\npart1-functions.c:86:11: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n        ~ ^  ~~~\npart1-functions.c:86:23: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n                    ~ ^  ~~~\npart1-functions.c:111:9: error: variable 'values' is uninitialized when used here [-Werror,-Wuninitialized]\n        values[i] = (float)i / n;\n        ^~~~~~\npart1-functions.c:107:18: note: initialize the variable 'values' to silence this warning\n    float *values;\n                 ^\n                  = NULL\npart1-functions.c:146:5: error: statement requires expression of integer type ('const char *' invalid)\n    switch (s) {\n    ^       ~\npart1-functions.c:147:10: error: expression is not an integer constant expression\n    case \"blue\":\n         ^~~~~~\npart1-functions.c:151:10: error: expression is not an integer constant expression\n    case \"orange\":\n         ^~~~~~~~\npart1-functions.c:167:70: error: format specifies type 'double' but the argument has type 'int' [-Werror,-Wformat]\nvoid ten(const int d) { printf(\"The radius of the circle is: %f.\\n\", d / 2); }\n                                                             ~~      ^~~~~\n                                                             %d\npart1-functions.c:192:30: warning: unused parameter 'value' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                             ^\npart1-functions.c:192:46: warning: unused parameter 'flag' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                                             ^\npart1-functions.c:222:28: warning: unused parameter 'transition' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                           ^\npart1-functions.c:222:64: warning: unused parameter 'input_string' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                                                               ^\n4 warnings and 11 errors generated.\nmake: *** [.objs/part1-functions-release.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Part1: Test function 5",
+        "name": "part1_test5",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\npart1-functions.c:25:15: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (grade > 70)\n        ~~~~~ ^ ~~\npart1-functions.c:26:32: error: format specifies type 'double' but the argument has type 'const char *' [-Werror,-Wformat]\n        printf(\"%f passed!\\n\", grade);\n                ~~             ^~~~~\n                %s\npart1-functions.c:37:10: error: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int'; take the address with & [-Werror,-Wint-conversion]\n    int *p = x;\n         ^   ~\n             &\npart1-functions.c:73:12: error: incompatible integer to pointer conversion initializing 'float *' with an expression of type 'const int' [-Werror,-Wint-conversion]\n    float *p = *x;\n           ^   ~~\npart1-functions.c:86:11: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n        ~ ^  ~~~\npart1-functions.c:86:23: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n                    ~ ^  ~~~\npart1-functions.c:111:9: error: variable 'values' is uninitialized when used here [-Werror,-Wuninitialized]\n        values[i] = (float)i / n;\n        ^~~~~~\npart1-functions.c:107:18: note: initialize the variable 'values' to silence this warning\n    float *values;\n                 ^\n                  = NULL\npart1-functions.c:146:5: error: statement requires expression of integer type ('const char *' invalid)\n    switch (s) {\n    ^       ~\npart1-functions.c:147:10: error: expression is not an integer constant expression\n    case \"blue\":\n         ^~~~~~\npart1-functions.c:151:10: error: expression is not an integer constant expression\n    case \"orange\":\n         ^~~~~~~~\npart1-functions.c:167:70: error: format specifies type 'double' but the argument has type 'int' [-Werror,-Wformat]\nvoid ten(const int d) { printf(\"The radius of the circle is: %f.\\n\", d / 2); }\n                                                             ~~      ^~~~~\n                                                             %d\npart1-functions.c:192:30: warning: unused parameter 'value' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                             ^\npart1-functions.c:192:46: warning: unused parameter 'flag' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                                             ^\npart1-functions.c:222:28: warning: unused parameter 'transition' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                           ^\npart1-functions.c:222:64: warning: unused parameter 'input_string' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                                                               ^\n4 warnings and 11 errors generated.\nmake: *** [.objs/part1-functions-release.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Part1: Test function 6",
+        "name": "part1_test6",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\npart1-functions.c:25:15: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (grade > 70)\n        ~~~~~ ^ ~~\npart1-functions.c:26:32: error: format specifies type 'double' but the argument has type 'const char *' [-Werror,-Wformat]\n        printf(\"%f passed!\\n\", grade);\n                ~~             ^~~~~\n                %s\npart1-functions.c:37:10: error: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int'; take the address with & [-Werror,-Wint-conversion]\n    int *p = x;\n         ^   ~\n             &\npart1-functions.c:73:12: error: incompatible integer to pointer conversion initializing 'float *' with an expression of type 'const int' [-Werror,-Wint-conversion]\n    float *p = *x;\n           ^   ~~\npart1-functions.c:86:11: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n        ~ ^  ~~~\npart1-functions.c:86:23: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n                    ~ ^  ~~~\npart1-functions.c:111:9: error: variable 'values' is uninitialized when used here [-Werror,-Wuninitialized]\n        values[i] = (float)i / n;\n        ^~~~~~\npart1-functions.c:107:18: note: initialize the variable 'values' to silence this warning\n    float *values;\n                 ^\n                  = NULL\npart1-functions.c:146:5: error: statement requires expression of integer type ('const char *' invalid)\n    switch (s) {\n    ^       ~\npart1-functions.c:147:10: error: expression is not an integer constant expression\n    case \"blue\":\n         ^~~~~~\npart1-functions.c:151:10: error: expression is not an integer constant expression\n    case \"orange\":\n         ^~~~~~~~\npart1-functions.c:167:70: error: format specifies type 'double' but the argument has type 'int' [-Werror,-Wformat]\nvoid ten(const int d) { printf(\"The radius of the circle is: %f.\\n\", d / 2); }\n                                                             ~~      ^~~~~\n                                                             %d\npart1-functions.c:192:30: warning: unused parameter 'value' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                             ^\npart1-functions.c:192:46: warning: unused parameter 'flag' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                                             ^\npart1-functions.c:222:28: warning: unused parameter 'transition' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                           ^\npart1-functions.c:222:64: warning: unused parameter 'input_string' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                                                               ^\n4 warnings and 11 errors generated.\nmake: *** [.objs/part1-functions-release.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Part1: Test function 7",
+        "name": "part1_test7",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\npart1-functions.c:25:15: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (grade > 70)\n        ~~~~~ ^ ~~\npart1-functions.c:26:32: error: format specifies type 'double' but the argument has type 'const char *' [-Werror,-Wformat]\n        printf(\"%f passed!\\n\", grade);\n                ~~             ^~~~~\n                %s\npart1-functions.c:37:10: error: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int'; take the address with & [-Werror,-Wint-conversion]\n    int *p = x;\n         ^   ~\n             &\npart1-functions.c:73:12: error: incompatible integer to pointer conversion initializing 'float *' with an expression of type 'const int' [-Werror,-Wint-conversion]\n    float *p = *x;\n           ^   ~~\npart1-functions.c:86:11: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n        ~ ^  ~~~\npart1-functions.c:86:23: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n                    ~ ^  ~~~\npart1-functions.c:111:9: error: variable 'values' is uninitialized when used here [-Werror,-Wuninitialized]\n        values[i] = (float)i / n;\n        ^~~~~~\npart1-functions.c:107:18: note: initialize the variable 'values' to silence this warning\n    float *values;\n                 ^\n                  = NULL\npart1-functions.c:146:5: error: statement requires expression of integer type ('const char *' invalid)\n    switch (s) {\n    ^       ~\npart1-functions.c:147:10: error: expression is not an integer constant expression\n    case \"blue\":\n         ^~~~~~\npart1-functions.c:151:10: error: expression is not an integer constant expression\n    case \"orange\":\n         ^~~~~~~~\npart1-functions.c:167:70: error: format specifies type 'double' but the argument has type 'int' [-Werror,-Wformat]\nvoid ten(const int d) { printf(\"The radius of the circle is: %f.\\n\", d / 2); }\n                                                             ~~      ^~~~~\n                                                             %d\npart1-functions.c:192:30: warning: unused parameter 'value' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                             ^\npart1-functions.c:192:46: warning: unused parameter 'flag' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                                             ^\npart1-functions.c:222:28: warning: unused parameter 'transition' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                           ^\npart1-functions.c:222:64: warning: unused parameter 'input_string' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                                                               ^\n4 warnings and 11 errors generated.\nmake: *** [.objs/part1-functions-release.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Part1: Test function 8",
+        "name": "part1_test8",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\npart1-functions.c:25:15: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (grade > 70)\n        ~~~~~ ^ ~~\npart1-functions.c:26:32: error: format specifies type 'double' but the argument has type 'const char *' [-Werror,-Wformat]\n        printf(\"%f passed!\\n\", grade);\n                ~~             ^~~~~\n                %s\npart1-functions.c:37:10: error: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int'; take the address with & [-Werror,-Wint-conversion]\n    int *p = x;\n         ^   ~\n             &\npart1-functions.c:73:12: error: incompatible integer to pointer conversion initializing 'float *' with an expression of type 'const int' [-Werror,-Wint-conversion]\n    float *p = *x;\n           ^   ~~\npart1-functions.c:86:11: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n        ~ ^  ~~~\npart1-functions.c:86:23: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n                    ~ ^  ~~~\npart1-functions.c:111:9: error: variable 'values' is uninitialized when used here [-Werror,-Wuninitialized]\n        values[i] = (float)i / n;\n        ^~~~~~\npart1-functions.c:107:18: note: initialize the variable 'values' to silence this warning\n    float *values;\n                 ^\n                  = NULL\npart1-functions.c:146:5: error: statement requires expression of integer type ('const char *' invalid)\n    switch (s) {\n    ^       ~\npart1-functions.c:147:10: error: expression is not an integer constant expression\n    case \"blue\":\n         ^~~~~~\npart1-functions.c:151:10: error: expression is not an integer constant expression\n    case \"orange\":\n         ^~~~~~~~\npart1-functions.c:167:70: error: format specifies type 'double' but the argument has type 'int' [-Werror,-Wformat]\nvoid ten(const int d) { printf(\"The radius of the circle is: %f.\\n\", d / 2); }\n                                                             ~~      ^~~~~\n                                                             %d\npart1-functions.c:192:30: warning: unused parameter 'value' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                             ^\npart1-functions.c:192:46: warning: unused parameter 'flag' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                                             ^\npart1-functions.c:222:28: warning: unused parameter 'transition' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                           ^\npart1-functions.c:222:64: warning: unused parameter 'input_string' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                                                               ^\n4 warnings and 11 errors generated.\nmake: *** [.objs/part1-functions-release.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Part1: Test function 9",
+        "name": "part1_test9",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\npart1-functions.c:25:15: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (grade > 70)\n        ~~~~~ ^ ~~\npart1-functions.c:26:32: error: format specifies type 'double' but the argument has type 'const char *' [-Werror,-Wformat]\n        printf(\"%f passed!\\n\", grade);\n                ~~             ^~~~~\n                %s\npart1-functions.c:37:10: error: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int'; take the address with & [-Werror,-Wint-conversion]\n    int *p = x;\n         ^   ~\n             &\npart1-functions.c:73:12: error: incompatible integer to pointer conversion initializing 'float *' with an expression of type 'const int' [-Werror,-Wint-conversion]\n    float *p = *x;\n           ^   ~~\npart1-functions.c:86:11: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n        ~ ^  ~~~\npart1-functions.c:86:23: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n                    ~ ^  ~~~\npart1-functions.c:111:9: error: variable 'values' is uninitialized when used here [-Werror,-Wuninitialized]\n        values[i] = (float)i / n;\n        ^~~~~~\npart1-functions.c:107:18: note: initialize the variable 'values' to silence this warning\n    float *values;\n                 ^\n                  = NULL\npart1-functions.c:146:5: error: statement requires expression of integer type ('const char *' invalid)\n    switch (s) {\n    ^       ~\npart1-functions.c:147:10: error: expression is not an integer constant expression\n    case \"blue\":\n         ^~~~~~\npart1-functions.c:151:10: error: expression is not an integer constant expression\n    case \"orange\":\n         ^~~~~~~~\npart1-functions.c:167:70: error: format specifies type 'double' but the argument has type 'int' [-Werror,-Wformat]\nvoid ten(const int d) { printf(\"The radius of the circle is: %f.\\n\", d / 2); }\n                                                             ~~      ^~~~~\n                                                             %d\npart1-functions.c:192:30: warning: unused parameter 'value' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                             ^\npart1-functions.c:192:46: warning: unused parameter 'flag' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                                             ^\npart1-functions.c:222:28: warning: unused parameter 'transition' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                           ^\npart1-functions.c:222:64: warning: unused parameter 'input_string' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                                                               ^\n4 warnings and 11 errors generated.\nmake: *** [.objs/part1-functions-release.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Part1: Test function 10",
+        "name": "part1_test10",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\npart1-functions.c:25:15: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (grade > 70)\n        ~~~~~ ^ ~~\npart1-functions.c:26:32: error: format specifies type 'double' but the argument has type 'const char *' [-Werror,-Wformat]\n        printf(\"%f passed!\\n\", grade);\n                ~~             ^~~~~\n                %s\npart1-functions.c:37:10: error: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int'; take the address with & [-Werror,-Wint-conversion]\n    int *p = x;\n         ^   ~\n             &\npart1-functions.c:73:12: error: incompatible integer to pointer conversion initializing 'float *' with an expression of type 'const int' [-Werror,-Wint-conversion]\n    float *p = *x;\n           ^   ~~\npart1-functions.c:86:11: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n        ~ ^  ~~~\npart1-functions.c:86:23: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n                    ~ ^  ~~~\npart1-functions.c:111:9: error: variable 'values' is uninitialized when used here [-Werror,-Wuninitialized]\n        values[i] = (float)i / n;\n        ^~~~~~\npart1-functions.c:107:18: note: initialize the variable 'values' to silence this warning\n    float *values;\n                 ^\n                  = NULL\npart1-functions.c:146:5: error: statement requires expression of integer type ('const char *' invalid)\n    switch (s) {\n    ^       ~\npart1-functions.c:147:10: error: expression is not an integer constant expression\n    case \"blue\":\n         ^~~~~~\npart1-functions.c:151:10: error: expression is not an integer constant expression\n    case \"orange\":\n         ^~~~~~~~\npart1-functions.c:167:70: error: format specifies type 'double' but the argument has type 'int' [-Werror,-Wformat]\nvoid ten(const int d) { printf(\"The radius of the circle is: %f.\\n\", d / 2); }\n                                                             ~~      ^~~~~\n                                                             %d\npart1-functions.c:192:30: warning: unused parameter 'value' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                             ^\npart1-functions.c:192:46: warning: unused parameter 'flag' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                                             ^\npart1-functions.c:222:28: warning: unused parameter 'transition' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                           ^\npart1-functions.c:222:64: warning: unused parameter 'input_string' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                                                               ^\n4 warnings and 11 errors generated.\nmake: *** [.objs/part1-functions-release.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Part1: Test function clear_bits",
+        "name": "part1_test_clear_bits",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\npart1-functions.c:25:15: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (grade > 70)\n        ~~~~~ ^ ~~\npart1-functions.c:26:32: error: format specifies type 'double' but the argument has type 'const char *' [-Werror,-Wformat]\n        printf(\"%f passed!\\n\", grade);\n                ~~             ^~~~~\n                %s\npart1-functions.c:37:10: error: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int'; take the address with & [-Werror,-Wint-conversion]\n    int *p = x;\n         ^   ~\n             &\npart1-functions.c:73:12: error: incompatible integer to pointer conversion initializing 'float *' with an expression of type 'const int' [-Werror,-Wint-conversion]\n    float *p = *x;\n           ^   ~~\npart1-functions.c:86:11: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n        ~ ^  ~~~\npart1-functions.c:86:23: error: ordered comparison between pointer and integer ('const char *' and 'int') [-Werror]\n    if (a >= 'A' && a <= 'z')\n                    ~ ^  ~~~\npart1-functions.c:111:9: error: variable 'values' is uninitialized when used here [-Werror,-Wuninitialized]\n        values[i] = (float)i / n;\n        ^~~~~~\npart1-functions.c:107:18: note: initialize the variable 'values' to silence this warning\n    float *values;\n                 ^\n                  = NULL\npart1-functions.c:146:5: error: statement requires expression of integer type ('const char *' invalid)\n    switch (s) {\n    ^       ~\npart1-functions.c:147:10: error: expression is not an integer constant expression\n    case \"blue\":\n         ^~~~~~\npart1-functions.c:151:10: error: expression is not an integer constant expression\n    case \"orange\":\n         ^~~~~~~~\npart1-functions.c:167:70: error: format specifies type 'double' but the argument has type 'int' [-Werror,-Wformat]\nvoid ten(const int d) { printf(\"The radius of the circle is: %f.\\n\", d / 2); }\n                                                             ~~      ^~~~~\n                                                             %d\npart1-functions.c:192:30: warning: unused parameter 'value' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                             ^\npart1-functions.c:192:46: warning: unused parameter 'flag' [-Wunused-parameter]\nlong int clear_bits(long int value, long int flag) {\n                                             ^\npart1-functions.c:222:28: warning: unused parameter 'transition' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                           ^\npart1-functions.c:222:64: warning: unused parameter 'input_string' [-Wunused-parameter]\nint little_automaton(int (*transition)(int, char), const char *input_string) {\n                                                               ^\n4 warnings and 11 errors generated.\nmake: *** [.objs/part1-functions-release.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Part1: Test function little_automaton()",
+        "name": "part1_test_little_automaton",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==12043== Memcheck, a memory error detector\n==12043== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==12043== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==12043== Command: ./part2\n==12043== \n==12043== \n==12043== HEAP SUMMARY:\n==12043==     in use at exit: 0 bytes in 0 blocks\n==12043==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==12043== \n==12043== All heap blocks were freed -- no leaks are possible\n==12043== \n==12043== For counts of detected and suppressed errors, rerun with: -v\n==12043== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n",
+        "ptsEarned": 1.0,
+        "description": "Part2: Checking for memory issues...",
+        "name": "part2_memory",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 0.0,
+        "description": "Part2: Test function main",
+        "name": "part2_test_main",
+        "ptsPossible": 11.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 0.0,
+        "description": "Part3: Test function one",
+        "name": "part3_test1",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 0.0,
+        "description": "Part3: Test function two",
+        "name": "part3_test2",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 0.0,
+        "description": "Part3: Test Dragon Encode",
+        "name": "part3_test3_dragon_encode",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 0.0,
+        "description": "Part3: Test Dragon Decode",
+        "name": "part3_test4_dragon_decode",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 0.0,
+        "description": "Part3: Test Id Dragon",
+        "name": "part3_test5_id_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 0.0,
+        "description": "Part3: Test XOR Dragon",
+        "name": "part3_test6_xor_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 0.0,
+        "description": "Part3: Test createDragon Function",
+        "name": "part3_test7_create_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 0.0,
+        "description": "Part3: Test Block Length",
+        "name": "part3_test8_block_length",
+        "ptsPossible": 1.0
+      }
+    ],
+    "revision": "2860",
+    "checksum": "c6ffae2196e06ec43bfaf251fc44fed8931e3e64  part1-functions.c\nc75739ab0e16681ec1d3f4b120cb5ad7539bff51  part2-main.c\n36bdb38d60b40e93d7355800c1bf47f4db0c93b8  part3-functions.c\n"
+  },
+  {
+    "timestamp": "2017-09-10 22:00:04.400409",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==12239== Memcheck, a memory error detector\n==12239== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==12239== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==12239== Command: ./part1\n==12239== \n==12239== \n==12239== HEAP SUMMARY:\n==12239==     in use at exit: 0 bytes in 0 blocks\n==12239==   total heap usage: 14 allocs, 14 frees, 4,584 bytes allocated\n==12239== \n==12239== All heap blocks were freed -- no leaks are possible\n==12239== \n==12239== For counts of detected and suppressed errors, rerun with: -v\n==12239== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n",
+        "ptsEarned": 1.0,
+        "description": "Part1: Checking for memory issues...",
+        "name": "part1_memory",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 1",
+        "name": "part1_test1",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 2",
+        "name": "part1_test2",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 3",
+        "name": "part1_test3",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 4",
+        "name": "part1_test4",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 5",
+        "name": "part1_test5",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 6",
+        "name": "part1_test6",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 7",
+        "name": "part1_test7",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 8",
+        "name": "part1_test8",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 9",
+        "name": "part1_test9",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 10",
+        "name": "part1_test10",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function clear_bits",
+        "name": "part1_test_clear_bits",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function little_automaton()",
+        "name": "part1_test_little_automaton",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==12363== Memcheck, a memory error detector\n==12363== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==12363== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==12363== Command: ./part2\n==12363== \n==12363== \n==12363== HEAP SUMMARY:\n==12363==     in use at exit: 0 bytes in 0 blocks\n==12363==   total heap usage: 3 allocs, 3 frees, 4,108 bytes allocated\n==12363== \n==12363== All heap blocks were freed -- no leaks are possible\n==12363== \n==12363== For counts of detected and suppressed errors, rerun with: -v\n==12363== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n",
+        "ptsEarned": 1.0,
+        "description": "Part2: Checking for memory issues...",
+        "name": "part2_memory",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 11.0,
+        "description": "Part2: Test function main",
+        "name": "part2_test_main",
+        "ptsPossible": 11.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test function one",
+        "name": "part3_test1",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test function two",
+        "name": "part3_test2",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Dragon Encode",
+        "name": "part3_test3_dragon_encode",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Dragon Decode",
+        "name": "part3_test4_dragon_decode",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Id Dragon",
+        "name": "part3_test5_id_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test XOR Dragon",
+        "name": "part3_test6_xor_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test createDragon Function",
+        "name": "part3_test7_create_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Block Length",
+        "name": "part3_test8_block_length",
+        "ptsPossible": 1.0
+      }
+    ],
+    "revision": "4765",
+    "checksum": "20950ece770ee5e066b78b7a504f7eecdca0b6e9  part1-functions.c\n9c3af799440ea7f465cd8bb3a93e4c52aa8f4255  part2-main.c\nd9e3edd08e137ecb0caeb94ca385b27455e93d27  part3-functions.c\n"
+  },
+  {
+    "timestamp": "2017-09-11 22:00:03.491964",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==1885== Memcheck, a memory error detector\n==1885== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==1885== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==1885== Command: ./part1\n==1885== \n==1885== \n==1885== HEAP SUMMARY:\n==1885==     in use at exit: 0 bytes in 0 blocks\n==1885==   total heap usage: 14 allocs, 14 frees, 4,584 bytes allocated\n==1885== \n==1885== All heap blocks were freed -- no leaks are possible\n==1885== \n==1885== For counts of detected and suppressed errors, rerun with: -v\n==1885== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n",
+        "ptsEarned": 1.0,
+        "description": "Part1: Checking for memory issues...",
+        "name": "part1_memory",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 1",
+        "name": "part1_test1",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 2",
+        "name": "part1_test2",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 3",
+        "name": "part1_test3",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 4",
+        "name": "part1_test4",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 5",
+        "name": "part1_test5",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 6",
+        "name": "part1_test6",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 7",
+        "name": "part1_test7",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 8",
+        "name": "part1_test8",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 9",
+        "name": "part1_test9",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 10",
+        "name": "part1_test10",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function clear_bits",
+        "name": "part1_test_clear_bits",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function little_automaton()",
+        "name": "part1_test_little_automaton",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==2008== Memcheck, a memory error detector\n==2008== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==2008== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==2008== Command: ./part2\n==2008== \n==2008== \n==2008== HEAP SUMMARY:\n==2008==     in use at exit: 0 bytes in 0 blocks\n==2008==   total heap usage: 3 allocs, 3 frees, 4,108 bytes allocated\n==2008== \n==2008== All heap blocks were freed -- no leaks are possible\n==2008== \n==2008== For counts of detected and suppressed errors, rerun with: -v\n==2008== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n",
+        "ptsEarned": 1.0,
+        "description": "Part2: Checking for memory issues...",
+        "name": "part2_memory",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 11.0,
+        "description": "Part2: Test function main",
+        "name": "part2_test_main",
+        "ptsPossible": 11.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test function one",
+        "name": "part3_test1",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test function two",
+        "name": "part3_test2",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Dragon Encode",
+        "name": "part3_test3_dragon_encode",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Dragon Decode",
+        "name": "part3_test4_dragon_decode",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Id Dragon",
+        "name": "part3_test5_id_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test XOR Dragon",
+        "name": "part3_test6_xor_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test createDragon Function",
+        "name": "part3_test7_create_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Block Length",
+        "name": "part3_test8_block_length",
+        "ptsPossible": 1.0
+      }
+    ],
+    "revision": "5968",
+    "checksum": "20950ece770ee5e066b78b7a504f7eecdca0b6e9  part1-functions.c\n9c3af799440ea7f465cd8bb3a93e4c52aa8f4255  part2-main.c\nd9e3edd08e137ecb0caeb94ca385b27455e93d27  part3-functions.c\n"
+  },
+  {
+    "timestamp": "2017-09-12 22:00:03.756136",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==24031== Memcheck, a memory error detector\n==24031== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==24031== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==24031== Command: ./part1\n==24031== \n==24031== \n==24031== HEAP SUMMARY:\n==24031==     in use at exit: 0 bytes in 0 blocks\n==24031==   total heap usage: 14 allocs, 14 frees, 4,584 bytes allocated\n==24031== \n==24031== All heap blocks were freed -- no leaks are possible\n==24031== \n==24031== For counts of detected and suppressed errors, rerun with: -v\n==24031== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n",
+        "ptsEarned": 1.0,
+        "description": "Part1: Checking for memory issues...",
+        "name": "part1_memory",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 1",
+        "name": "part1_test1",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 2",
+        "name": "part1_test2",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 3",
+        "name": "part1_test3",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 4",
+        "name": "part1_test4",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 5",
+        "name": "part1_test5",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 6",
+        "name": "part1_test6",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 7",
+        "name": "part1_test7",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 8",
+        "name": "part1_test8",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 9",
+        "name": "part1_test9",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 10",
+        "name": "part1_test10",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function clear_bits",
+        "name": "part1_test_clear_bits",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function little_automaton()",
+        "name": "part1_test_little_automaton",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==24154== Memcheck, a memory error detector\n==24154== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==24154== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==24154== Command: ./part2\n==24154== \n==24154== \n==24154== HEAP SUMMARY:\n==24154==     in use at exit: 0 bytes in 0 blocks\n==24154==   total heap usage: 3 allocs, 3 frees, 4,108 bytes allocated\n==24154== \n==24154== All heap blocks were freed -- no leaks are possible\n==24154== \n==24154== For counts of detected and suppressed errors, rerun with: -v\n==24154== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n",
+        "ptsEarned": 1.0,
+        "description": "Part2: Checking for memory issues...",
+        "name": "part2_memory",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 11.0,
+        "description": "Part2: Test function main",
+        "name": "part2_test_main",
+        "ptsPossible": 11.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test function one",
+        "name": "part3_test1",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test function two",
+        "name": "part3_test2",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Dragon Encode",
+        "name": "part3_test3_dragon_encode",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Dragon Decode",
+        "name": "part3_test4_dragon_decode",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Id Dragon",
+        "name": "part3_test5_id_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test XOR Dragon",
+        "name": "part3_test6_xor_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test createDragon Function",
+        "name": "part3_test7_create_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Block Length",
+        "name": "part3_test8_block_length",
+        "ptsPossible": 1.0
+      }
+    ],
+    "revision": "6736",
+    "checksum": "20950ece770ee5e066b78b7a504f7eecdca0b6e9  part1-functions.c\n9c3af799440ea7f465cd8bb3a93e4c52aa8f4255  part2-main.c\nd9e3edd08e137ecb0caeb94ca385b27455e93d27  part3-functions.c\n"
+  },
+  {
+    "timestamp": "2017-09-13 12:00:03.523927",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==10008== Memcheck, a memory error detector\n==10008== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==10008== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==10008== Command: ./part1\n==10008== \n==10008== \n==10008== HEAP SUMMARY:\n==10008==     in use at exit: 0 bytes in 0 blocks\n==10008==   total heap usage: 14 allocs, 14 frees, 4,584 bytes allocated\n==10008== \n==10008== All heap blocks were freed -- no leaks are possible\n==10008== \n==10008== For counts of detected and suppressed errors, rerun with: -v\n==10008== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n",
+        "ptsEarned": 1.0,
+        "description": "Part1: Checking for memory issues...",
+        "name": "part1_memory",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 1",
+        "name": "part1_test1",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 2",
+        "name": "part1_test2",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 3",
+        "name": "part1_test3",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 4",
+        "name": "part1_test4",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 5",
+        "name": "part1_test5",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 6",
+        "name": "part1_test6",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 7",
+        "name": "part1_test7",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 8",
+        "name": "part1_test8",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 9",
+        "name": "part1_test9",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 10",
+        "name": "part1_test10",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function clear_bits",
+        "name": "part1_test_clear_bits",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function little_automaton()",
+        "name": "part1_test_little_automaton",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==10131== Memcheck, a memory error detector\n==10131== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==10131== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==10131== Command: ./part2\n==10131== \n==10131== \n==10131== HEAP SUMMARY:\n==10131==     in use at exit: 0 bytes in 0 blocks\n==10131==   total heap usage: 3 allocs, 3 frees, 4,108 bytes allocated\n==10131== \n==10131== All heap blocks were freed -- no leaks are possible\n==10131== \n==10131== For counts of detected and suppressed errors, rerun with: -v\n==10131== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n",
+        "ptsEarned": 1.0,
+        "description": "Part2: Checking for memory issues...",
+        "name": "part2_memory",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 11.0,
+        "description": "Part2: Test function main",
+        "name": "part2_test_main",
+        "ptsPossible": 11.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test function one",
+        "name": "part3_test1",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test function two",
+        "name": "part3_test2",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Dragon Encode",
+        "name": "part3_test3_dragon_encode",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Dragon Decode",
+        "name": "part3_test4_dragon_decode",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Id Dragon",
+        "name": "part3_test5_id_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test XOR Dragon",
+        "name": "part3_test6_xor_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test createDragon Function",
+        "name": "part3_test7_create_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Block Length",
+        "name": "part3_test8_block_length",
+        "ptsPossible": 1.0
+      }
+    ],
+    "revision": "7211",
+    "checksum": "20950ece770ee5e066b78b7a504f7eecdca0b6e9  part1-functions.c\n9c3af799440ea7f465cd8bb3a93e4c52aa8f4255  part2-main.c\nd9e3edd08e137ecb0caeb94ca385b27455e93d27  part3-functions.c\n"
+  },
+  {
+    "timestamp": "2017-09-14 00:00:02.804421",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==30424== Memcheck, a memory error detector\n==30424== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==30424== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==30424== Command: ./part1\n==30424== \n==30424== \n==30424== HEAP SUMMARY:\n==30424==     in use at exit: 0 bytes in 0 blocks\n==30424==   total heap usage: 14 allocs, 14 frees, 4,584 bytes allocated\n==30424== \n==30424== All heap blocks were freed -- no leaks are possible\n==30424== \n==30424== For counts of detected and suppressed errors, rerun with: -v\n==30424== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n",
+        "ptsEarned": 1.0,
+        "description": "Part1: Checking for memory issues...",
+        "name": "part1_memory",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 1",
+        "name": "part1_test1",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 2",
+        "name": "part1_test2",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 3",
+        "name": "part1_test3",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 4",
+        "name": "part1_test4",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 5",
+        "name": "part1_test5",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 6",
+        "name": "part1_test6",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 7",
+        "name": "part1_test7",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 8",
+        "name": "part1_test8",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 9",
+        "name": "part1_test9",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function 10",
+        "name": "part1_test10",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function clear_bits",
+        "name": "part1_test_clear_bits",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part1: Test function little_automaton()",
+        "name": "part1_test_little_automaton",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==30547== Memcheck, a memory error detector\n==30547== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==30547== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==30547== Command: ./part2\n==30547== \n==30547== \n==30547== HEAP SUMMARY:\n==30547==     in use at exit: 0 bytes in 0 blocks\n==30547==   total heap usage: 3 allocs, 3 frees, 4,108 bytes allocated\n==30547== \n==30547== All heap blocks were freed -- no leaks are possible\n==30547== \n==30547== For counts of detected and suppressed errors, rerun with: -v\n==30547== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n",
+        "ptsEarned": 1.0,
+        "description": "Part2: Checking for memory issues...",
+        "name": "part2_memory",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 11.0,
+        "description": "Part2: Test function main",
+        "name": "part2_test_main",
+        "ptsPossible": 11.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test function one",
+        "name": "part3_test1",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test function two",
+        "name": "part3_test2",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Dragon Encode",
+        "name": "part3_test3_dragon_encode",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Dragon Decode",
+        "name": "part3_test4_dragon_decode",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Id Dragon",
+        "name": "part3_test5_id_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test XOR Dragon",
+        "name": "part3_test6_xor_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test createDragon Function",
+        "name": "part3_test7_create_dragon",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..",
+        "ptsEarned": 1.0,
+        "description": "Part3: Test Block Length",
+        "name": "part3_test8_block_length",
+        "ptsPossible": 1.0
+      }
+    ],
+    "revision": "7847",
+    "checksum": "20950ece770ee5e066b78b7a504f7eecdca0b6e9  part1-functions.c\n9c3af799440ea7f465cd8bb3a93e4c52aa8f4255  part2-main.c\nd9e3edd08e137ecb0caeb94ca385b27455e93d27  part3-functions.c\n"
+  }
+]

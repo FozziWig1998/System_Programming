@@ -1,0 +1,40 @@
+/**
+ * Splendid Synchronization Lab
+ * CS 241 - Fall 2017
+ */
+#include <assert.h>
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+#include "queue.c"
+
+int main() {
+
+
+    
+	queue* this = queue_create(30);
+	
+
+	
+	queue_node* head = this->head;
+	queue_node* tail = this->tail;
+	//queue_node* tail = this->tail;
+	
+	for (size_t i = 1; i <= 20; i++) {
+		
+		queue_push(this,(void*)i);
+		printf("now push, %p\n",i);
+	}	
+	
+	
+	for (size_t i = 1; i <= 30; i++) {
+		void* k = queue_pull(this);
+		printf("now pop, %p\n",k);
+	}
+	
+	
+
+	return 0;
+}

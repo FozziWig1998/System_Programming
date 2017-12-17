@@ -1,0 +1,296 @@
+[
+  {
+    "checksum": "6aad37bb01c3b370d7108367f7d005e54a859846  mini_valgrind.c\n",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmini_valgrind.c:26:74: error: too few arguments to function call, expected 2, have 1\n        meta_data* ptr1 = calloc(sizeof(meta_data) + num_elements * element_size);\n                          ~~~~~~                                                ^\nmini_valgrind.c:33:12: error: use of undeclared identifier 'ptr'; did you mean 'ptr1'?\n    return ptr + 1;\n           ^~~\n           ptr1\nmini_valgrind.c:26:13: note: 'ptr1' declared here\n        meta_data* ptr1 = calloc(sizeof(meta_data) + num_elements * element_size);\n                   ^\n2 errors generated.\nmake: *** [.objs/mini_valgrind-release.pic.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Test with a program that frees or reallocs invalid addresses",
+        "name": "bad_free",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmini_valgrind.c:26:74: error: too few arguments to function call, expected 2, have 1\n        meta_data* ptr1 = calloc(sizeof(meta_data) + num_elements * element_size);\n                          ~~~~~~                                                ^\nmini_valgrind.c:33:12: error: use of undeclared identifier 'ptr'; did you mean 'ptr1'?\n    return ptr + 1;\n           ^~~\n           ptr1\nmini_valgrind.c:26:13: note: 'ptr1' declared here\n        meta_data* ptr1 = calloc(sizeof(meta_data) + num_elements * element_size);\n                   ^\n2 errors generated.\nmake: *** [.objs/mini_valgrind-release.pic.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Test calloc with a program that has no memory leaks",
+        "name": "calloc",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmini_valgrind.c:26:74: error: too few arguments to function call, expected 2, have 1\n        meta_data* ptr1 = calloc(sizeof(meta_data) + num_elements * element_size);\n                          ~~~~~~                                                ^\nmini_valgrind.c:33:12: error: use of undeclared identifier 'ptr'; did you mean 'ptr1'?\n    return ptr + 1;\n           ^~~\n           ptr1\nmini_valgrind.c:26:13: note: 'ptr1' declared here\n        meta_data* ptr1 = calloc(sizeof(meta_data) + num_elements * element_size);\n                   ^\n2 errors generated.\nmake: *** [.objs/mini_valgrind-release.pic.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Test with a program that has a variety of issues",
+        "name": "full",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmini_valgrind.c:26:74: error: too few arguments to function call, expected 2, have 1\n        meta_data* ptr1 = calloc(sizeof(meta_data) + num_elements * element_size);\n                          ~~~~~~                                                ^\nmini_valgrind.c:33:12: error: use of undeclared identifier 'ptr'; did you mean 'ptr1'?\n    return ptr + 1;\n           ^~~\n           ptr1\nmini_valgrind.c:26:13: note: 'ptr1' declared here\n        meta_data* ptr1 = calloc(sizeof(meta_data) + num_elements * element_size);\n                   ^\n2 errors generated.\nmake: *** [.objs/mini_valgrind-release.pic.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Test with a program that has memory leaks",
+        "name": "leak",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmini_valgrind.c:26:74: error: too few arguments to function call, expected 2, have 1\n        meta_data* ptr1 = calloc(sizeof(meta_data) + num_elements * element_size);\n                          ~~~~~~                                                ^\nmini_valgrind.c:33:12: error: use of undeclared identifier 'ptr'; did you mean 'ptr1'?\n    return ptr + 1;\n           ^~~\n           ptr1\nmini_valgrind.c:26:13: note: 'ptr1' declared here\n        meta_data* ptr1 = calloc(sizeof(meta_data) + num_elements * element_size);\n                   ^\n2 errors generated.\nmake: *** [.objs/mini_valgrind-release.pic.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Test with a program that has no memory leaks",
+        "name": "no_leak",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmini_valgrind.c:26:74: error: too few arguments to function call, expected 2, have 1\n        meta_data* ptr1 = calloc(sizeof(meta_data) + num_elements * element_size);\n                          ~~~~~~                                                ^\nmini_valgrind.c:33:12: error: use of undeclared identifier 'ptr'; did you mean 'ptr1'?\n    return ptr + 1;\n           ^~~\n           ptr1\nmini_valgrind.c:26:13: note: 'ptr1' declared here\n        meta_data* ptr1 = calloc(sizeof(meta_data) + num_elements * element_size);\n                   ^\n2 errors generated.\nmake: *** [.objs/mini_valgrind-release.pic.o] Error 1\n",
+        "ptsEarned": 0.0,
+        "description": "Test realloc with a program that has no memory leaks",
+        "name": "realloc",
+        "ptsPossible": 1.0
+      }
+    ],
+    "revision": "15763",
+    "timestamp": "2017-09-22 22:00:02.719066"
+  },
+  {
+    "checksum": "536eefade54a93576aa2822684d110b07b02f4ea  mini_valgrind.c\n",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nIncorrect number of invalid addresses!",
+        "ptsEarned": 0.0,
+        "description": "Test with a program that frees or reallocs invalid addresses",
+        "name": "bad_free",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test calloc with a program that has no memory leaks",
+        "name": "calloc",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that has a variety of issues",
+        "name": "full",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that has memory leaks",
+        "name": "leak",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that has no memory leaks",
+        "name": "no_leak",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Incorrect total memory requested",
+        "ptsEarned": 0.0,
+        "description": "Test realloc with a program that has no memory leaks",
+        "name": "realloc",
+        "ptsPossible": 1.0
+      }
+    ],
+    "revision": "17607",
+    "timestamp": "2017-09-24 22:00:02.602736"
+  },
+  {
+    "checksum": "6d07116c792a55529e376551457b51a797bce64b  mini_valgrind.c\n",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.\nIncorrect number of invalid addresses!",
+        "ptsEarned": 0.0,
+        "description": "Test with a program that frees or reallocs invalid addresses",
+        "name": "bad_free",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test calloc with a program that has no memory leaks",
+        "name": "calloc",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that has a variety of issues",
+        "name": "full",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that has memory leaks",
+        "name": "leak",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that has no memory leaks",
+        "name": "no_leak",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test realloc with a program that has no memory leaks",
+        "name": "realloc",
+        "ptsPossible": 1.0
+      }
+    ],
+    "revision": "19307",
+    "timestamp": "2017-09-25 22:00:02.864528"
+  },
+  {
+    "checksum": "a3919fb6c928fad9decdbf77e05166787d1a3f7c  mini_valgrind.c\n",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that frees or reallocs invalid addresses",
+        "name": "bad_free",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test calloc with a program that has no memory leaks",
+        "name": "calloc",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that has a variety of issues",
+        "name": "full",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that has memory leaks",
+        "name": "leak",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that has no memory leaks",
+        "name": "no_leak",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test realloc with a program that has no memory leaks",
+        "name": "realloc",
+        "ptsPossible": 1.0
+      }
+    ],
+    "revision": "20202",
+    "timestamp": "2017-09-26 22:00:03.129436"
+  },
+  {
+    "checksum": "a3919fb6c928fad9decdbf77e05166787d1a3f7c  mini_valgrind.c\n",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that frees or reallocs invalid addresses",
+        "name": "bad_free",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test calloc with a program that has no memory leaks",
+        "name": "calloc",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that has a variety of issues",
+        "name": "full",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that has memory leaks",
+        "name": "leak",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that has no memory leaks",
+        "name": "no_leak",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test realloc with a program that has no memory leaks",
+        "name": "realloc",
+        "ptsPossible": 1.0
+      }
+    ],
+    "revision": "20690",
+    "timestamp": "2017-09-27 12:00:03.213498"
+  },
+  {
+    "checksum": "a3919fb6c928fad9decdbf77e05166787d1a3f7c  mini_valgrind.c\n",
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that frees or reallocs invalid addresses",
+        "name": "bad_free",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test calloc with a program that has no memory leaks",
+        "name": "calloc",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that has a variety of issues",
+        "name": "full",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that has memory leaks",
+        "name": "leak",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test with a program that has no memory leaks",
+        "name": "no_leak",
+        "ptsPossible": 1.0
+      },
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.",
+        "ptsEarned": 1.0,
+        "description": "Test realloc with a program that has no memory leaks",
+        "name": "realloc",
+        "ptsPossible": 1.0
+      }
+    ],
+    "revision": "21225",
+    "timestamp": "2017-09-28 00:00:02.866367"
+  }
+]
